@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Les Directive en AngularJS</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+
+<!--
+      <Les DIRECTIVE ng-**** les choix proposer a la place des " ** ">
+      Chaque "directive dans AngularJS" à une mission spéssique.
+      Elles Vont nous permettre de cree des interactions avec le DOM.
+      1- "ng-app" : Sigmal le debut de lapplication agular.
+      2- nous avons le "ng-init" : initialisation des donner de l'application.
+      3- "ng-model" : permet de déclarer dans le le model , une "varialble"
+      4- "ng-repeat ": répéte les élément du html pour chaque élément d'une colletion (Boucle)
+      5- ""
+ -->
+
+  </head>
+  <body ng-app>
+    <!-- ng-init peret dassigner des variable a notre Application. -->
+    <div ng-init="contacts = [{'prenom':'Hugo :','nom':' LIEGEAR'},{'prenom':' Karim :','nom':' Ihadadene '},{'prenom':' Jean :','nom':' Dujardin '}]">
+      <p><u>Liste Des nom et prenom</u></p>
+      <ul>
+        <li ng-repeat="contact in contacts">
+          {{contact.prenom}}<strong>{{contact.nom}}</strong>
+        </li>
+      </ul>
+
+    </div>
+  </body>
+</html>

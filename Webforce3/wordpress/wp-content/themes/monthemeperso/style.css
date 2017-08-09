@@ -1,0 +1,31 @@
+/*
+ Theme Name:  monthemeperso
+ Theme URI:    http://example.com/monthemeperso/
+ Description:  monthemeperso
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:    monthemeperso
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  newthemeschild
+*/
+body{font-family: 'roboto', sans-serif;}
+
+.vert{background: green;}
+.orange{background: orange;}
+.bleu{background:blue ;}
+.jaune{background:yellow ;}
+.rose{background:pink ;}
+.violet{background:purple ;}
+
+.haut-gauche, .haut-droite, .entete, .container-fluid-footer{min-height: 80px;}
+
+
+.mon-logo{float:left; margin-right: 3%; margin-top: 5px;}
+.mon-slogan{float:left;}
+
+section{
+  min-height: 530px;
+}

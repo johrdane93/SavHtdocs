@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!--titre-->
+    <title>[...]</title>
+   
+    <!--pour internet explorer-->
+    <!--s'assurer qu'il utilise la dernière version du moteur de rendu.-->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+    <!--affichage du site sans zoom, initialisé a 100%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!--Bootstrap CSS-->
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!--styles CSS-->
+    <link rel="stylesheet" href="../06-atelier-responsive/css/Style-Bootstrap.css">
+  
+    <!--html5Shiv-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <style>
+      [class*="col-"]{
+            background-color: rgba(86, 61,124, 0.15);
+            border: 1px solid rgba(86, 61,124, 0.2);
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin-bottom: 5px;
+      }
+    </style>    
+  
+  </head>
+  <body>
+  <!--contenue HTML-->
+  <!--le container va inclure l'enssemble de nos lignes et colonnes-->
+  <!--BOOTSTRAP propose  2 container : .container et le . container-full-->
+  <div class="container">
+      
+      <!--creation d'une ligne-->
+  </div>
+   <div class="row">
+       <!--dans votre ligne ou rangée vous pouvez cree plusieur colonnes mais rappellze vous toujour  sur la base de vos 12 colonnes -->
+       
+            <!--une grand colonnes de 12-->
+       <div class="col-lg-12">COL-LG-12</div>
+       
+              <!--2colonnes cote a cote-->
+       <div class="class col-lg-6">COL-LG-6</div>
+       <div class="class col-lg-6">COL-LG-6</div>
+       
+               3colonnes cote a cote
+        <div class="class col-lg-4">BLABLA</div>
+        <div class="class col-lg-4">COL-LG-4</div>
+        <div class="class col-lg-4">COL-LG-4</div>
+        
+              <!--4colonnes cote a cote-->
+        <div class="class col-lg-3">COL-LG-3</div>
+        <div class="class col-lg-3">COL-LG-3</div>
+        <div class="class col-lg-3">COL-LG-3</div>
+        <div class="class col-lg-3">COL-LG-3</div>
+        
+        <!--JE PEUT IMBIQUER MES RANGEES-->
+        <div class="col-lg-12">COL-LG-12
+            <div class="row">
+                <div class="class col-lg-4">COL-LG-4
+                    <div class="class col-lg-8">COL-LG-8
+                        <div class="row">
+                            <div class="class col-lg-6">COL-LG-6</div>
+                            <div class="class col-lg-6"><img src="../06-atelier-responsive/img/Bitmap(1).png" alt="imgbootstrap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div><!--fin .row-->
+   
+   <!--------------------------------------------
+     plusieur type de colonnes:
+         lg;ecran large
+         md: ecran moyen (medium)
+         sm: ecran reduit (small)
+         xs: petit ecran(x-small)
+     ------------------------------------->
+   <div class="row">
+       <!--Observer le compotement-->
+       
+       <!--test avec LG-->
+       <div class="class col-lg-6">COL-LG-6</div>
+       <div class="class col-lg-6">COL-LG-6</div>
+       <!--test avec MD-->
+       <div class="class col-md-6">COL-MD-6</div>
+       <div class="class col-md-6">COL-MD-6</div>
+       <!--test avec SM-->
+       <div class="class col-sm-6">COL-SM-6</div>
+       <div class="class col-sm-6">COL-SM-6</div>
+       <!--test avec XS-->
+       <div class="class col-xs-6">COL-XS-6</div>
+       <div class="class col-xs-6">COL-XS-6</div>
+   </div><!--fin .row-->
+   
+   <!--vous pouvez -->
+   <div class="row">
+       <!--Observer le compotement-->
+       
+       <!--test avec LG-->
+       <div class="class col-lg-12 col-md-6 col-sm-3">COL-LG-12 COL-SM-6 COL-SM-3</div>
+       <div class="class col-lg-12 col-md-6 col-sm-9">COL-LG-12 COL-SM-6 COL-SM-3</div>
+       <!---------------------------
+           A VOIR VOUS MEME (CLASSES CSS)
+        -col-xx-push-* : Décaler une colonnes vers la droite.
+        -col-xx-pull-* : Décaler une colonnes vers la gauche.
+        -visible-xx-offset-*: permet de sauter la colonne.
+        -hidden-xx :permet de cacher une colonne pour un type d'ecran en particulier.
+       ------------------------------>
+       
+   </div><!--fin .row-->
+   
+   <!--jQuery-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  
+  </body>
+</html>

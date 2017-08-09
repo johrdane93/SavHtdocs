@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>10-exercice5</title>
+    <style media="screen">
+      main{
+        max-width: 990px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      section{
+        width: 100%;
+        height: auto;
+        float: left;
+        min-height: 200px;
+        margin-bottom: 10px;
+        background-image: linear-gradient(0deg, #ccc, #fff);
+        border: 1px solid #ccc;
+      }
+      h1{
+        font-family: arial, Helvetica, sans-serif;
+        font-weight: normal;
+        text-align: center;
+        color: #000
+
+      }
+      article{
+        font-family:  arial, Helvetica, sans-serif;
+        font-size: 14px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+
+  </head>
+  <body>
+<main>
+  <h1>Titre</h1>
+  <section>
+      <article class="art">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </article>
+</section>
+
+</main>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+<!-- JS -->
+<script type="text/javascript">
+  $.getJSON('https://jsonplaceholder.typicode.com/posts',function(articles){
+    console.log(articles);
+        // -- 2a- je vais parcourir la liste des mes article poue les afficher sur la page
+        $.each(articles, function(indice, article){
+          $("<section><header><h1>"+ article.title +"</h1></header><article>" + article.body + "<><>")
+        });
+  });
+</script>
+
+    <!-- src JS-->
+    <script src="asset\js\10.js" charset="utf-8"></script>
+  </body>
+</html>

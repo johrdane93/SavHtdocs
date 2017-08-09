@@ -1,0 +1,121 @@
+body {
+    background-image: url(../img/background.png);
+    margin: 0;
+}
+
+/*-----------------------------
+    ||| BARRE DE NAVIGATION
+-------------------------------*/
+
+header {
+    background-color: #C55394;
+    width: 100%;
+    margin: auto;
+    float: left;
+}
+
+header h2 {
+    font-family: 'Courgette', cursive;
+    color: #fff;
+    padding-left: 20px;
+    width: 500px;
+    float: left;
+}
+
+header nav {
+    width: 1200px;
+    float: left;
+    margin-left: 180px
+}
+
+header nav ul {
+    margin: 0;
+    padding-top: 30px;
+    text-align: right;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding-right: 70px;
+}
+    
+header nav ul li a {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #EB43A3;
+    padding: 30px 20px 23px;
+}
+
+header nav ul li.current a {
+    background-color: #EB43A3;
+    padding: 30px 10px 23px 10px;
+}
+
+/*-----------------------------
+    ||| SECTION PROJECTEUR
+-------------------------------*/
+
+#projecteur h1 {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    color: #C55394;
+    margin-top: 0px;
+    padding-top: 250px;
+    position: relative;
+}
+
+#projecteur img {
+    position: absolute;
+    width: 550px;
+    margin-top: -180px;
+    margin-left: 650px;
+}
+
+/*-----------------------------
+    ||| MAIN DE LA PAGE
+-------------------------------*/
+
+main {
+    width: 960px;
+    height: 960px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 1px 1px 10px #333;
+    border-radius: 10px;
+}
+
+main i {
+    font-family: 'Courgette', cursive;
+    margin-left: 20px;
+    margin-top: 50px;
+    width:480px;
+    color: #EB43A3
+}
+
+main p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+main img {
+    float: left;
+    width: 207px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

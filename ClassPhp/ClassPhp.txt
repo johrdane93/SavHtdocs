@@ -1,0 +1,18 @@
+Vous travaillez pour un concessionnaire.
+
+Ils se lancent dans la ventes en ligne et vous demandent de creer une class Voiture()
+qui aura les propriétés privées suivantes :
+
+- marque (string de 3 à 20 caractères)
+- Etat (string : Bon , Exellent, Mauvais)
+- Date (int)
+- Couleur (string de 3 à 10 caractères)
+
+Faire les getters/setters permettant de valider le type de données ci-dessus ainsi que le
+constructeur permettant d’instancier la classe.
+
+Ajouter une méthode getInfos() permettant de retourner la totalité des propriétés sous forme
+de tableau.
+
+Dans un nouveau fichier, instancier la classe afin de pouvoir afficher plusieurs Voitures différentes et
+afficher le résultat à l’aide de la méthode getInfos() précédemment créée.

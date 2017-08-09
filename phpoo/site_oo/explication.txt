@@ -1,0 +1,13 @@
+phpoo
+   explication.txt
+    vendor
+    web
+    src
+    app
+
+-------------
+arborescence
+    Vendor/ :l coeur de l'application
+     web/   : repertoir raine( index.php,img/ , photo/, font/ js/, css/ ect...)
+     src/   : code php , sql ,html propre a notre  application 
+     app/   :configuration de lapplication 

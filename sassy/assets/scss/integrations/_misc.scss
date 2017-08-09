@@ -1,0 +1,101 @@
+/**
+ * scifiFacets
+ */
+.scifi-facets-group-list ul {
+  margin-left: 0;
+  list-style: none;
+}
+.scifi-facets-select-multiple {
+  height: auto;
+  font-size: 1em;
+}
+.scifi-facets-ordering select {
+  font-size: 1em;
+  margin-bottom: .4em;
+}
+.scifi-facets-ordering a {
+  text-decoration: none;
+}
+span.scifi-facet-item-count {
+  float: right;
+  font-size: .8em;
+}
+
+
+/**
+ * JetPack
+ */
+// Jetpack gravatar hovers fix
+div.gcard.grofile {
+  z-index: 99999;
+}
+
+
+/**
+ * Ninja-forms
+ */
+@if $supports_ninjaforms == 1 {
+  .ninja-forms-required-items {
+    @extend .message;
+  }
+  .ninja-forms-error label,
+  .ninja-forms-field-error {
+    @extend .status-error;
+  }
+}
+
+
+/**
+ * Caldera forms
+ */
+.caldera-grid {
+  .form-group {
+    margin-bottom: 1em;
+  }
+  .alert {
+    @extend .message;
+  }
+  .alert-success {
+    @extend .message-ok;
+  }
+  .alert-info {
+    @extend .message-info;
+  }
+  .alert-warning {
+    @extend .message-error
+  }
+  .alert-error {
+    @extend .message-error;
+  }
+}
+
+
+/**
+ * YITH Quick View
+ */
+#yith-quick-view-content {
+  > .product > .entry {
+    > .images {
+      float: left;
+      width: 35%;
+    }
+    > .summary {
+      float: left;
+      width: 60%;
+      margin-left: 5%;
+    }
+  }
+  .cart {
+    display: none;
+  }
+}
+.entry-archive.entry .button.yith-wcqv-button {
+  display: block;
+  width: 100%;
+  height: 3em;
+  margin: 0 !important;
+  padding: 0;
+  border: none;
+  line-height: 3em;
+  vertical-align: middle;
+}

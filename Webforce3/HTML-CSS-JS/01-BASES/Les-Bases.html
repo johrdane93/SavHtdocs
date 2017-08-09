@@ -1,0 +1,213 @@
+<!-- SYNTAXE DE BASE D'UNE PAGE HTML -->
+<!DOCTYPE html>
+<html>
+    <!-- La Balise HTML Contient l'ensemble de ma page -->
+    <head>
+        <!-- La Balise HEAD contient les éléments d'entete de ma Page -->
+        
+        <!-- Permet de préciser l'encodage de notre page HTML -->
+        <meta charset="utf-8">
+        
+        <!-- La Balise Title me permet de donner un titre à ma Page -->
+        <title>Les Bases du HTML !</title>
+        
+        <!-- Les Balises Méta [Description, Keyword,...] sont utiles pour le référencement -->
+        <meta name="description" content="Une description unique pour chaque page, relation avec son thème">
+    </head>
+    
+    <body>
+        <!-- Dans la Balise BODY viendra s'insérer le contenu de ma page. -->
+        
+        <!-- A la Découverte des Balises de Titres -->
+        <h1>Titre de Niveau 1</h1>
+        <h2>Titre de Niveau 2</h2>
+        <h3>Titre de Niveau 3</h3>
+        <h4>Titre de Niveau 4</h4>
+        <h5>Titre de Niveau 5</h5>
+        <h6>Titre de Niveau 6</h6>
+        
+        <p><strong>Les Paragraphes :</strong></p>
+        
+        <!-- Paragraphe Simple -->
+        <p>Ici, s'introduit de façon inopinée un joli paragraphe...</p>
+        
+        <!-- Paragraphe avec un Saut de Ligne -->
+        <p>Je ne comprend pas pourquoi... <br> ce saut de ligne !!!</p>
+        
+        <p><strong>Liste Non-Ordonnée :</strong></p>
+        
+        <ul>
+            <li>Accueil</li>
+            <li>Présentation</li>
+            <li>Mes Services</li>
+            <li>Contact</li>
+        </ul>
+        
+        <p><strong>Liste Ordonnée :</strong></p>
+        
+        <ol>
+            <li>Réalisation d'un CdC</li>
+            <li>Réalisation d'une Maquette Graphique</li>
+            <li>Intégration HTML</li>
+        </ol>
+        
+        <!-- Les DIVs -->
+        <p><strong>Les Balises DIV :</strong></p>
+        
+        <div>
+            <p>La Balise DIV, est une balise neutre de type block. Elle me servira à structurer ma page.</p>
+        </div>
+        
+        <div>
+            <p>Elles agissent sur un Axe Vertical et donc génère un retour à la ligne. <br>
+                <em>
+                    Je pourrais toutefois changer leurs comportements avec du CSS.
+                </em>
+            </p>
+            
+            <hr>
+            
+            <p>Les Balises <span>Inline</span> elles, agissent sur un Axe Horizontal et donc ne génère aucun retour à la ligne.</p>
+        </div>
+        
+        <p><strong>Les Tableaux :</strong></p>
+        
+        <!-- Création d'un Tableau -->
+        <!-- ATTENTION - ATTENTION - ATTENTION - ATTENTION -->
+        <!-- N'utilisez JAMAIS les tableaux pour la mise en page HTML ! Vos tableaux servent uniquement pour afficher des données. -->
+        
+        <table border="1">
+            <!-- thead : L'Entete de mon Tableau -->
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <!-- tfoot : Son pied de page -->
+            <tfoot>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Age</th>
+                </tr>
+            </tfoot>
+            <!-- tbody : Son corps -->
+            <tbody>
+                <tr>
+                    <td>LIEGEARD</td>
+                    <td>Hugo</td>
+                    <td>85 ans</td>
+                </tr>
+                <tr>
+                    <td>NOUEL</td>
+                    <td colspan="2">Rodrigue</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- EN PLUS : colspan et rowspan permettent de fusionner les lignes et les colonnes du tableau -->
+        
+        <hr>
+        
+        <p><strong>Les Formulaires :</strong></p>
+        
+        <form name="NomDuFormulaire" action="FichierChargeduTraitementDeMonFormulaire.php"
+        method="GET|POST">
+            
+            <ul>
+                <li>La Balise FORM permet de créer un Formulaire</li>
+                
+                <li><strong>name :</strong> Permet de donner un Nom au Formulaire</li>
+                
+                <li><strong>action :</strong> Cet attribut est OBLIGATOIRE et permet de renseigner le script, la page vers laquelle l'utilisateur sera redirigé lors de l'envoi du Formulaire. <em>Cette page va recevoir l'ensemble des données saisie par mon utilisateur.</em></li>
+                
+                <li><strong>method :</strong> Permet de préciser quelle méthode [GET|POST] doit être utilisée par le navigateur pour transmettre les données saisies vers la page <strong>action</strong></li>
+            </ul>
+            
+            <!-- Champ Text -->
+            <label for="MonUtilisateur">Utilisateur :</label>
+            <input type="text" name="utilisateur"
+                id="MonUtilisateur" placeholder="Saisissez votre Utilisateur...">
+                
+            <!-- Mon Formulaire étant en method="POST" je vais récupérer dans mon fichier défini à "action" la valeur via $_POST['utilisateur'] en PHP -->
+            
+            <br>
+            <br>
+            
+            <!-- Champ Select : Créer une liste déroulante -->
+            <label for="MonPays">Choisissez votre Pays</label>
+            <select name="pays" id="MonPays">
+                <option value="fr">France</option>
+                <option selected value="mq">Martinique</option>
+                <option value="gp">Guadeloupe</option>
+                <option value="gf">Guyane</option>
+            </select>
+            
+            <br>
+            <br>
+            <!-- Bouton Radio -->
+            <label for="homme">Homme :</label>
+            <input type="radio" name="sexe" checked 
+                id="homme" value="homme">
+                
+            <label for="femme">Femme :</label>
+            <input type="radio" name="sexe" 
+                id="femme" value="femme">
+            
+            <br>
+            <br>
+            <!-- Checkbox -->
+            <input type="checkbox" name="Loisirs"
+                id="piano" value="piano">
+            <label for="piano">Piano</label>
+            
+            <br>
+            
+            <input type="checkbox" name="Loisirs"
+                id="flute" value="flute">
+            <label for="flute">Flûte</label>
+            
+            <br>
+            
+            <input type="checkbox" name="Loisirs"
+                id="violon" value="violon">
+            <label for="violon">Violon</label>
+            
+            <br>
+            <br>
+            
+            <!-- Créer une zone de texte -->
+            <textarea name="observation" placeholder="Avez-vous des Observations ?" maxlength="50"></textarea>
+            
+            <!-- Soumettre mon Formulaire -->
+            <input type="submit" value="Envoyer mes Données">
+            
+        </form>
+        
+        <p><strong>Créer un Lien en HTML</strong></p>
+        <!-- Lien en HTML -->
+        <a href="../monpremierfichier.html"
+            target="_blank" title="Cliquez-ici !">
+                Mon Premier Fichier HTML</a>
+        
+        <!-- Insérer une image -->
+        <p><strong>Insérer une Image</strong></p>
+        <img src="http://lorempicsum.com/futurama/350/200/1" 
+            alt="Mon Texte Alternatif">
+        
+        <!-- Pour faire un lien sur mon image, je l'entoure de la balise a, tout simplement. -->
+        <a href="http://www.google.fr" target="_blank">
+            <img src="http://lorempicsum.com/futurama/350/200/1" alt="Google">
+        </a>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+

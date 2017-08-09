@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mon premier cour MySQL</title>
+  </head>
+  <body>
+
+    <section id="Generalités">
+      <h1>************************<br>
+      <br>---- cree une base de donner -- <br>
+      ***************************<br></h1>
+   <h3>Pour faire Les requete sql nous utilison la console sous xampp:</h3>
+   <ol>
+     <li>cd c:\xampp\mysql\bin</li><br>
+     <li>mysql.exe -u root --password</li><br>
+     <li>Le sql n'est pas sensible a la casse , mais par convention on le met les mot cle SQL en MAJUSCULES .</li><br>
+   </ol>
+  </section>
+  <section id="Requete generalesr">
+    <h1>-- ************************<br>
+    <br>-- remplire la base de donne --<br>
+    ***************************<br></h1>
+      <ol>
+        <li>CREATE DATABASE entreprise;-- cree une base de donner appeler " entreprise" </li><br>
+        <li>USE entreprise; -- pour ce connecter a la ase donner "entreprise".</li><br>
+        <li> SHOW DATABASES; -- affiche les base de donner disponible dans le SGBD.</li><br>
+        <li>Ne Pas Utiliser Dans la Console : DROP DATABASE entreprise; -- supprime definitivement une bdd</li><br>
+        <li>DROP TABLE employes; --- supprime definitivement la table "employes"</li><br>
+        <li>TRUNCATE employes;--Vide la table "employes" definitivement </li><br>
+        <li>  SHOW TABLES; --liste Les table de la bdd sur la quelle on et connecté(ici entreprise)</li><br>
+        <li>DESC employes; --affiche la structure de la table employes </li><br>
+      </ol>
+  </section>
+
+  <section id="Les requete de selection">
+    <h1>*************************************<br>
+      <br> --Chercher ou Afficher Des information <br>
+    --***************************************<br></h1>
+    <ol>
+      <li>SELECT nom,PRENOM FROM employes; <br>--affiche Le nom et le premon de tout les employes contenue dans la table
+      </li><br>
+
+      <li>SELECT service FORM employes;<br>-- affiche le service des employes</li><br>
+
+      <li>--DISTINCT <br> <br>|SELECT DISTINCT service FROM employes; <br>-- DISTINCT permet d'eliminer les doublon dans la requete de selection : ainsi on affiche  la liste precise des  service
+      </li><br>
+
+      <li >ALL ou * <br> <br> SELECT * FROM employes; <br>-- affiche TOUS les champs des employes (nom, premon,ect...)
+      </li><br>
+
+      <li>  --clause WHERE<br>
+        <br>SELECT nom, prenom FROM employes WHERE service = 'informatique' ; <br>--affiche le nom et le prenom des employes du servive informatique.Notez que informatique est une valeur passe entre quotes
+      </li><br>
+
+      <li>-- BETWEEN <br> <br> SELECT nom, prenom, date_embauche FROM employes WHERE date_embauche BETWEEN'2006-01-01' AND'2010-12-31';
+      </li><br>
+
+      <li>--LIKE <br>  <br>SELECT prenom FROM employes WHERE prenom LIKE 's%';<br>SELECT prenom FROM employes WHERE prenom LIKE '%-%'; <br>-- Le % est un caractére joker qui remplace tous les autre caratctére . On affiche donc les prenom des employes qui commence par s
+      </li><br>
+
+      <li>--opérateur de comparaisons <br> <br>  SELECT nom , prenom FROM employes WHERE service != 'informatique'; <br> <br>-- affiche le nom et le prenom des employes qui ne sont pas du service informatique.  -- =
+          -- < <br>
+          -- > <br>
+          -- <= <br>
+          -- >= <br>
+          -- != ou < > pour differante de <br>
+        <br>SELECT nom, prenom FROM employes WHERE salaire > 3000; <br>-- affiche le nom prenom at salaire des employes de salaire supperieur a 3000.<br>
+      </li>
+
+      <li>--ORDER BY <br><br>SELECT nom,prenom,salaire FROM employes ORDER BY salaire; <br> <br> --affiche le nom prenom et le salaire des employes par ordre de salaire croissant. par defaut l'ordre et croissant. <br> <br> SELECT nom,prenom,salaire FROM employes ORDER BY salaire ASC, prenom DESC ; <br> <br>-- ASC pour ordre croissanr , DESC pour ordre décroissant  (selon l'alphabet).affiche les info d'abord par ordre croissant des salaires puis par ordre décroissant des prenoms<br>
+      </li><br><br>
+
+      <li>--LIMIT<br><br>SELECT nom,prenom,salaire FROM employes ORDER BY salaire DESC LIMIT 0,1; <br><br> --affiche le nom prenom salaire de l'employer ayant le salaire le plus élever : on tire les salaire par odre décroissant puis avec ORDER BY puis on prend le prelier enregistrement avec LIMIT .01 (c4est a direà partire de l'enregistrement  0 et sur 1 ligne)
+      </li> <br>
+
+      <li>--L'alias avec AS<br><br>SELECT nom,prenom,salaire * 12 AS salaire_annuel FROM employes; <br><br>-- donc HAS permet de donner une etiquette au calcul salaire *12,appelee alias
+      </li> <br>
+
+      <li>--SUM<br><br>SELECT SUM(salaire* 12)FROM employes;<br><br>--affiche la somme des saliare multipliés pas 12mois
+        </li><br>
+
+      <li>--MIN & MAX<br><br>SELECT MIN(salaire)FROM employes; --affiche le plus petit salaires<br><br>SELECT MAX(salaire)FROM employes; <br><br>--affiche le plus haut salaire <br><br>SELECT prenom.nom. MIN(salaire FROM employes); <br><br>--affiche le mon premon et salaire minimum pour afficher les info du salaire le plus petit on fait un ORDER BY suivi d'un LIMIT (cf ci-dessus)
+      </li><br>
+
+      <li>-- AVG (Pour average = moyenne)<br><br>SELECT AVG(salaire)FROM employes;<br><br>--affiche la moyenne des salaires
+      </li> <br>
+
+      <li>--ROUND<br><br>SELECT ROUND(AVG(salaire),0) FROM employes;<br><br>--arrondit la moyenne des salaires a 0 décimale
+      </li> <br>
+
+      <li>--COUNT<br><br>SELECT COUNT(id_employes) FROM employes WHERE sexe ='f';<br><br>--affiche le nombre d'employes féminins.
+      </li><br>
+
+      <li>-- IN<br>SELECT nom,prenom,service FROM employes WHERE service IN ('conpatibilite','informatique');<br><br>-- affiche les employes dont le service est dans la liste 'conpatibilité', 'informatique'.<br><br>SELECT nom,prenom,service FROM employes WHERE service NOT IN ('conpatibilite','informatique');<br>-- affiche dans le service les employer qui ne sont pas dans le service compta et info
+      </li><br><br>
+
+      <li>-- AND & OR<br><br> SELECT * FROM employes WHERE service ='commercial' AND salaire <= 2000;<br><br>--affiche toutes les ingo (*) des employes du service commercial ET dont le salaireest infériaur ou egale a 2000<br><br>SELECT * FROM employes WHERE service ='production' AND salaire =1900 OR salaire =2300;<br><br>--affiche les employes de la production dont le salire et de 1900, ou les employes dont le salire et de 2300.
+      </li><br><br>
+
+      <li>-- GROUP BY<br><br>SELECT service,COUNT(id_employes)FROM employes;<br><br>--affiche le nombre d'employes par service : GROUP BY  est utiliser avec COUNT , SUM, AVG,pour regrouper leur résultat selon le champ indiqué<br><br>
+      </li><br><br>
+
+      <li>-- GROUP BY ... HAVING<br><br>SELECT service,COUNT(id_employes) AS nombre FROM employes GROUP BY service HAVING nombre >1;<br><br>-- HAVING remplace me  WHERE apret un GROUP BY. Affiche Les service ayant plus d'un employé.
+      </li><br><br>
+
+ <li>Fin De Ce Chapitre</li>
+    </ol>
+  </section>
+   <section id="Les requéte d'insertion">
+     <ol>
+       <li>--*****************************************<br>
+       --        <br>Les requéte d'insertion<br>
+       --*****************************************<br></li><br><br>
+
+       <li>SELECT * FROM employes ;
+<br><br>INSERT INTO employes(id_employes,prenom,nom,sexe,service,date_embauche,salaire)
+      VALUE(8059,'alexis','richy','m','informatique','2011-12-28', 1800);<br><br>-- on insert un employes avec des donner dans les champ indiques dans les premiéres
+      --parenthéses, les valeur inbséré etant spécifiees dans le  même ordre  ans les secondes parenthéses .<br><br>
+       </li><br><br>
+
+       <li><br><br><br><br><br><br></li><br><br>
+     </ol>
+   </section>
+
+  </body>
+</html>

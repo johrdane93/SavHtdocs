@@ -1,0 +1,3 @@
+a<span class='pseudo' style="color:#3b88eb;">sam</span><span>sam a rejoint la salle</span><span class='time'>16:41</span>
+<span class='pseudo' style="color:#3b88eb;">sam</span><span>azerty </span><span class='time'>16:41</span>
+<span class='pseudo' style="color:#3b88eb;">sam</span><span>gftghkvhk </span><span class='time'>16:41</span>

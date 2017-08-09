@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- AngularJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+
+    <!--  route angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js" integrity="sha256-SUsNyx9Kr9rHA3thrzSefdS883z1Q0ZOLXPF3p2Tt+o=" crossorigin="anonymous"></script>
+
+    <!--styles JS-->
+   <link rel="stylesheet" href="04-LesFormulaire\js\main.js">
+
+   <title>Les controller AngularJs</title>
+  </head>
+      <body ng-app="mainApp" ng-controller="mainController">
+        <!-- contenu Html -->
+          <main class="container">
+      <!-- permet a notre application  de devenir une spa , cette directive ne peut exister qu'une seul fois dans l'application.
+            grace a ng-view , les differentes vue de notre application seront rendu ici.
+            plus d'info w3s
+     -->
+      <div ng-view></div>
+
+    </main>
+  </body>
+</html>

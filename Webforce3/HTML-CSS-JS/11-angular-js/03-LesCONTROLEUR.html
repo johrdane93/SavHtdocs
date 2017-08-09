@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LES COntroleur en AngularJS </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+  </head>
+  <body ng-app='monApplication'>
+    <!--nom taf <h1>exercice nom prenom </h1>-->
+    <div class="">
+      <p>
+
+      <input type="text" ng-model="nom" name="nom" placeholder="Saisissez votre nom">
+      <input type="text" ng-model="prenom" name="prenom" placeholder="Saisissez votre prenom">
+      </p>
+
+      <div ng-show="h2"
+      <input  name="nom"  type="checkbox" ng-model>
+      <h2>Bonjour {{nom}} {{prenom}} !!!</h2>
+      <br>(\__/)<br>(='.'=)  //<br>(')_(')//
+      </div>
+    </div>
+
+    <!-- taf Hugo -->
+    <h3>Ajouter un contact</h3>
+    <form ng-controller="monController">
+
+    <p><input type="text" placeholder="votre prenom..." ng-model="contact.prenom"></p>
+    <p><input type="text" placeholder="taper Votre nom..." ng-model="contact.nom"></p>
+
+    <!------------
+      LES FILTRES :
+      http://www.tutoriel-angularjs.fr/tutoriel/2-utilisation-complete-d-angularjs-les-filtres
+      les filtres sur AngularJS permettent de manipuler les données avant de les formater ou de les filtrer.
+      AngularJS dispose de 9 filtres fournit par défaut:
+      1.lowercase/uppercase
+      2.Number
+      3.Currency
+      4.json
+      5.limitTo
+      6.date
+      7.orderBy
+      8.filter
+    -->
+
+    <p ng-show="contact.prenom && contact.nom">Vous avez saisie : {{contact.nomConplet(0)}} </p>
+    <pre>{{contact}}</pre>
+  </form>
+  <script type="text/javascript">
+    //--1 creation d'un module angular qui contiendra notre application et ses dépendance (controleur,service,Directives,..)
+    angular.module('monApplication', [])
+    // --2 cree un controleur pour mon application
+          // --Le scope contien l'enssemble des information de mon application. c'est lui qui fait la liaison entre le modele et la vue.
+      .controller('monController',['$scope',function($scope) {
+        // --3 Accéder à notre variable contact depuis le controller.
+         $scope.contact  = {
+            'prenom' :'Hugo',
+            'nom'    : '' ,
+            'nomComplet' : function() {
+              return $scope.contact.prenom+ " " + $scope.contact.nom;
+            }
+         }
+
+
+      }]);
+
+
+  </script>
+
+
+  </body>
+</html>

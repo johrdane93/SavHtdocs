@@ -1,0 +1,13 @@
+body{
+  background-color: #fcfaed;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+footer{
+  background-color: #cc261a;
+  transform: skewY(10deg);
+}
+header a img{
+  width: 150%;
+}

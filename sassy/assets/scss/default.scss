@@ -1,0 +1,32 @@
+@import "_fonts";
+@import "_normalize";
+@import "_mixins";
+@import "_vars";
+@import "_typography";
+@import "_layout";
+@import "_content";
+@import "_widgets";
+
+// SiteOrigin Panels.
+@if $supports_siteorigin_panels == 1 {
+  @import "integrations/_siteorigin-panels";
+}
+
+// Seems there is no layouting plugin, then include default styling.
+@else {
+  @import "integrations/_no-layouting-plugin";
+}
+
+// BBpress
+@if $supports_bbpress == 1 {
+  @import "integrations/_bbpress";
+}
+
+// WooCommerce
+@if $supports_woocommerce == 1 {
+  @import "integrations/_woocommerce";
+}
+
+// Other integrations
+@import "integrations/_misc";
+@import "integrations/_widgets";

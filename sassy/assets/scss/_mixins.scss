@@ -1,0 +1,72 @@
+/**
+ * Prepare messagebox styling
+ *
+ * @param string
+ */
+@mixin _message($color) {
+
+  border: 1px solid $color;
+  background: mix($appearance_color_background, $color, 80%);
+  color: $color;
+
+  @extend .shadow;
+  @extend .roundness-light;
+
+  display: block;
+  margin: .6em 0;
+  padding: 1em;
+  font-size: 1.1em;
+  line-height: 1.3em;
+
+  ul,
+  li {
+    margin-left: 1em;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: underline !important;
+  }
+
+  a,.button,button {
+    border: none;
+    background: transparent !important;
+    color: $color;
+
+    &:hover {
+      background: $color !important;
+      color: mix($appearance_color_background, $color, 80%) !important;
+    }
+
+  }
+
+}
+
+/**
+ * Use fontawesome icons
+ *
+ * @param string
+ * @param int
+ * @param string
+ */
+@mixin fa-icon($icon, $size: 1, $pos: null) {
+
+  @if $pos == null {
+    @extend .fa;
+    @extend .fa--i-#{$icon};
+    @if ($size != 1) {
+      font-size: 1em * $size;
+    }
+    vertical-align: middle;
+  }
+  @else {
+    &:#{$pos} {
+      @extend .fa;
+      @extend .fa--i-#{$icon};
+      @if ($size != 1) {
+        font-size: 1em * $size;
+      }
+      vertical-align: middle;
+    }
+  }
+}

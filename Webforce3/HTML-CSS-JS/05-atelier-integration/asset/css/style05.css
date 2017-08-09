@@ -1,0 +1,329 @@
+body{
+    background: url(../img/fond.jpg) no-repeat;
+    background-size: cover;
+}
+main{
+    /*---ma page fera maximum de 1300px de large---*/
+    width: 100%;
+    max-width: 1300px;
+    /*sa hauteur s'adaptera en fonction du bcontenu---*/
+    height: auto;
+    /*--elle cera centree au milieu de la page--*/
+    margin:0 auto;
+}
+main > p{
+    font-family: arial,sans-serif;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+main > p span{
+    text-decoration: underline;
+}
+mt-40{
+    margin-top: 40px;
+
+}
+#bandeau2{
+  background:url("itop.jpg") 0 0 no-repeat;
+  width:480px;
+  padding:0;
+}
+#menugauche2 span,#menudroite2 span{
+  text-indent: -5000px;
+  display:inline-block;
+}
+#menugauche2 ul,#menudroite2 ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  border:0;
+}
+#menugauche2 li,#menudroite2 li{
+  margin:0;
+  padding:0;
+}#menugauche2 li a,#menudroite2 li a{
+  position:absolute;
+  top:2px;
+  left:6px;
+  display:block;
+  height:52px;
+  width:92px;
+  background:url("../img/drapeaux.jpg") no-repeat;
+  margin:0;
+  border:0;
+}
+section{
+    
+}
+header.top{
+    /*--dimension et positionnement--*/
+    width: 100%;
+    /*height: 50px;*/
+    float: left;
+      /*--decoration--*/
+    border-top-left-radius: 10px;
+    background: -webkit-linear-gradient(-90deg, #ffffff 0%, #dddddd 100%);
+    background: -moz-linear-gradient(-90deg, #ffffff 0%, #dddddd 100%);
+    background: -o-linear-gradient(-90deg, #ffffff 0%, #dddddd 100%);
+    background: -ms-linear-gradient(-90deg, #ffffff 0%, #dddddd 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #dddddd 100%);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
+}
+.traduction{
+    width: 25%;
+    height: 19px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 166px;
+}
+.traduction p{
+    font-family:arial,sans-serif;
+    font-size: 11px;
+    color: salmon; 
+    float: left;
+    margin: 4px 5px 0 0;
+    text-transform: uppercase;
+}
+.traduction-fr{
+    display: block;
+    width: 28px;
+    height: 19px;
+    float: left;
+    background: url(../img/drapeaux.jpg) no-repeat;
+    background-position: -71px 0px;
+    text-indent: -5000px;
+ }
+.traduction-en{
+    display: block;
+    width: 28px;
+    height: 19px;
+    float: left;
+    margin-left: 5px;
+    background: url(../img/drapeaux.jpg) no-repeat;
+    background-position: -107px 0px;
+    text-indent: -5000px;
+}
+
+.top nav {
+    width: auto;
+    height: auto;
+    float: right;
+    margin-right: 175px;
+}
+
+.top nav ul  {
+    margin: 0;
+    padding: 0 10px;
+    
+}
+
+.top nav ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+.top nav ul li a{
+    font-family: 'roboto condensend',sans-serif;
+    color: cadetblue;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 48px;
+    
+}
+
+.top nav ul li a:hover {
+    text-decoration: underline;
+}
+top nav ul li.current a{
+    color: #3060a7;
+}
+.top nav ul li:nth-Child(3) a{
+    text-decoration: underline;
+    color: red;
+}
+.tof01{
+     /*--dimension et positionnement--*/
+    height: auto;
+    width: 100%;
+    float: left; 
+    max-width: 100%;
+    position: relative;
+}
+/*------------------------------------------------
+             menu tof01
+-----------------------------------------------------*/
+.tof01 nav{
+     /*--dimension et positionnement--*/
+    width: 340px;
+    height: auto;
+    position: absolute;
+    left: 170px;
+    top: 0px;
+     /*--deco--*/
+    border-left: 5px solid #c43e3e;
+    background: -webkit-linear-gradient(-90deg, #ffffff 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(-90deg, #ffffff 0%, #bbbbbb 100%);
+    background: -o-linear-gradient(-90deg, #ffffff 0%, #bbbbbb 100%);
+    background: -ms-linear-gradient(-90deg, #ffffff 0%, #bbbbbb 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #bbbbbb 100%);
+    text-align: center;
+}
+
+.tof01 nav a img{
+    margin: 20px 0;
+}
+.tof01 nav ul{
+    margin: 0;
+    padding: 0;
+}
+.tof01 nav ul li{
+    width: 100%;
+    padding-top: 15px;
+    height: 57px;
+    background: -webkit-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: -o-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: -ms-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: linear-gradient(180deg, #fbfbfb 0%, #bbbbbb 100%);
+    list-style: none;/*--permer de supprimer les puces des (ul)ou(ol)--*/
+}
+.tof01 nav ul li a{
+    font-family: 'roboto condensend',sans-serif;
+    font-size: 18px;
+    color: #000;
+    text-decoration:none;
+    
+
+}
+.tof01 nav ul li a:hover{
+    text-decoration: underline
+}
+.tof01 nav ul li span{
+    
+    font-family: 'Times New Roman',sans-serif;
+    font-size: 15px;
+    color: #000;
+    font-style: italic;
+    font-weight: 300;
+    
+}
+.tof01 nav ul li:first-child a {
+    color: brown;
+}
+.tof01 nav ul li:nth-Child(2) a {
+    color: burlywood;
+}
+.tof01 nav ul li:nth-Child(3) a {
+    color:blue;
+}
+.tof01 nav ul li:last-Child a {
+    color: aquamarine;
+}
+
+
+
+/*-------------------------------------------------------------*/
+.rouge{
+    background-color: #fe3224;
+    width: 100%;
+    height: 43px;
+    float: left; 
+    margin-top: -4px;
+    
+    
+   
+} 
+.rouge img{
+    /*--Ma solution--*/
+    /*width: 15%;*/
+    /*margin-left: 42%;*/
+    /*margin-top: -1%;*/
+   /* max-width: 100%;*/
+    /*1ersolution*/
+    display: block;
+    margin: auto;
+    position: relative;
+    bottom: 28px;
+    /*--2eme solution--*/
+  /*  position: absolute;*/
+    /*left: 50%;*/
+   /* top: 30%;*/
+    /*transform: translate(-50% ,900%);*/
+    
+}
+
+.textdefin{
+    width: 100%;
+    height: 114px;
+    font-size: 12px;
+    text-align: center;
+    float: left;
+    background: url(../img/Rectangles.png) no-repeat;
+    margin:0 auto;
+    font-family: arial,sans-serif;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    }
+.textdefin> p span{
+    text-decoration: underline;
+    text-decoration: inherit;
+    color: red
+}
+.textdefin> p span.red{
+    color: red
+}
+ .textdefin img{
+    width: 100%;
+    height: 100px;
+    float: left;
+    margin-top: -5%;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.btn {
+    width: 346px;
+    height: 37px;
+    display: block;
+    position: relative;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: -webkit-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: -moz-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: -o-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: -ms-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: linear-gradient(180deg, #fe8e86 0%, #fe3224 100%);
+    font-family: 'roboto condensend',sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 30;
+    margin-left: 36%;
+    
+}
+.btn::before {
+    width: 147px;
+    height: 36px;
+    
+    background: url(../img/chefle01.png);
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: -160px;
+}
+.btn::after{
+    width: 147px;
+    height: 36px;
+    
+    background: url(../img/fleche02.png);
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 360px;
+}
+

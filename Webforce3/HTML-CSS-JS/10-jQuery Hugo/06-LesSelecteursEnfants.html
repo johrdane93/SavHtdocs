@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Aujourd'hui, CSS en Folie !</title>
+        
+        <!-- Ajouter un Fichier CSS à ma Page -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+    </head>
+    <body>
+        <main>
+            <header>
+                <section>
+                    <img src="assets/img/bandeau-isen.jpg" alt="Bandeau ISEN">
+                    <img src="assets/img/logoIsen.png" class="logo" alt="Logo ISEN">
+                </section>
+                <ul>
+                    <li class="current"><a href="index.html">Accueil</a></li>
+                    <li><a href="presentation.html">Présentation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </header>
+            <section>
+                <h1>Devenez Ingénieur chez ISEN !</h1>
+                <aside>
+                    <!-- 1. Image d'Illustration -->
+                    <img src="assets/img/apprentissage.jpg" alt="ISEN" />
+                    <img src="assets/img/loupe.png" class="loupe" alt="Loupe">
+                </aside>
+                <article>
+                    <!-- 2. Texte d'Introduction -->
+                    <p>Les formations d’ingénieur en alternance au sein de l’ISEN peuvent se faire en contrat d’apprentissage ou en contrat de professionnalisation. Dans les deux cas, l’étudiant bénéficie d’un contrat de travail avec l’entreprise qui l’accueille, d’une rémunération et d’une prise en charge du coût de sa formation.</p>
+                    
+                    <p><strong>Contrats d'apprentissage</strong></p>
+                    
+                    <p>Les 3 campus de Lille, Brest et Toulon proposent des formations par l'apprentissage. Retrouvez ces formations et les conditions d'admissions directement sur les pages des campus.</p>
+                </article>
+            </section>
+            <footer>
+                <section class="gmap">
+                    <!-- 3. Mettre en Place une Carte Google Map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.3958316832745!2d2.394815915437716!3d48.90785030517728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66c4656857155%3A0x94b8bde5f2bf0008!2s142+Avenue+Jean+Jaur%C3%A8s%2C+93500+Pantin!5e0!3m2!1sfr!2sfr!4v1490693598209" 
+                    width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </section>
+                <section class="newsletter">
+                    <!-- 4. Formulaire de Newsletter | Nom, Prénom et Email -->
+                    <form name="Newsletter" action="newsletter.php" method="post">
+                        <fieldset>
+                            <legend>Newsletter</legend>
+                            <input type="text" name="nom" placeholder="Nom">
+                            <input type="text" name="prenom" placeholder="Prénom">
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="submit" value="M'inscrire !">
+                        </fieldset>
+                    </form>
+                </section>
+                <section class="contact">
+                    <!-- 5. Coordonnée de Contact -->
+                    <h3>Contactez-nous</h3>
+                    <address>
+                        <strong>ISEN</strong> <br>
+                        <a href="tel:+33783971515"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;0783 97 15 15</a> <br>
+                        <a href="mailto:wf3@hl-media.fr"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;wf3@hl-media.fr</a> <br>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;142 Avenue Jean Jaurès <br>
+                        93500 Pantin <br>
+                        FRANCE
+                    </address>
+                </section>
+            </footer>
+        </main>
+
+        <!-- Intégration de jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <!-- Mon Script -->
+    <script src="assets/js/06.js"></script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

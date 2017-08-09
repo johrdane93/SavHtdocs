@@ -1,0 +1,1570 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Sassy 0.99\n"
+"Report-Msgid-Bugs-To: https://github.com/dimitrov-adrian/sassy\n"
+"POT-Creation-Date: 2015-04-23 18:55:26+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: ../index.php:39 ../includes/helpers.php:673
+msgid "No posts found."
+msgstr ""
+
+#: ../functions.php:17
+#, php-format
+msgid ""
+"Sassy theme requires PHP >= 5.3.0, but you have PHP %s. Upgrade it or "
+"contact your hosting provider. Otherwise the theme will not work."
+msgstr ""
+
+#: ../functions.php:26
+msgid ""
+"The site is under maintenance. We are working to get it back as soon as "
+"possible."
+msgstr ""
+
+#: ../functions.php:146
+msgid "Home"
+msgstr ""
+
+#: ../functions.php:198 ../includes/layouts.php:668
+msgid "Search"
+msgstr ""
+
+#: ../functions.php:205 ../functions.php:208 ../functions.php:214
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#: ../functions.php:211
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: ../functions.php:234
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:264
+msgid "Post navigation"
+msgstr ""
+
+#: ../functions.php:287 ../functions.php:304
+msgid "Next page"
+msgstr ""
+
+#: ../functions.php:288 ../functions.php:303
+msgid "Previous page"
+msgstr ""
+
+#: ../functions.php:305
+msgid "Page"
+msgstr ""
+
+#: ../includes/admin-page-help.php:13
+msgid ""
+"\n"
+"Format: <condition>[=<arg>] ... <condition>[=<arg>]\n"
+"\n"
+"All conditions have AND logic, which means\n"
+"``cond1 cond2 cond3`` will be evaluted as\n"
+"(bool)cond1 AND (bool)cond2 AND (bool)cond3\n"
+"\n"
+"Supporting OR logics per global scope in example\n"
+"``cond1 cond2 cond3 OR condA condB condC``\n"
+"which will be evaluted as:\n"
+"(\n"
+"  (bool)cond1 AND (bool)cond2 AND (bool)cond2)\n"
+"   OR\n"
+"  (bool)condA AND (bool)condB AND (bool)condC)\n"
+")\n"
+"\n"
+"Supported condition tags:\n"
+"\n"
+"post_type=<post_type[,post_type...]>\n"
+"  validate if current request is from post or archive from given post type\n"
+"\n"
+"post_format=<post_format[,post_format..]>\n"
+"  validate if current post is in post format, if not the whole rule return "
+"false.\n"
+"\n"
+"taxonomy:<taxonomy_name>[=<term[,<term2>]>]\n"
+"  validate if current request is from post or archive in given taxonomy and "
+"if given then term\n"
+"\n"
+"get:<GET param name>[=<value>]\n"
+"  check if there is GET parameter\n"
+"\n"
+"url=news*\n"
+"  check if current URL matches news* pattern\n"
+"\n"
+"Other supported condition tags:\n"
+"  comments_open, pings_open, is_home, is_front_page, is_singular, is_archive,"
+" is_search, is_paged, is_date, is_year, is_month, is_day, is_404, "
+"is_attachment, is_user_logged_in, is_rtl, in_the_loop, is_main_query, "
+"has_excerpt, has_post_thumbnail, is_sticky, is_odd, is_even\n"
+"\n"
+"Also inverting is supported with ! prefix:\n"
+"  Example: !is_404\n"
+"\n"
+"Example for rule that handle if current request is singular post view and it "
+"has post thumbnail: is_singular has_post_thumbnail\n"
+msgstr ""
+
+#: ../includes/admin-page-system.php:4 ../includes/theme.php:216 ..
+#: /includes/theme.php:216
+msgid "Tools"
+msgstr ""
+
+#: ../includes/admin-page-system.php:5
+msgid "Import/Export"
+msgstr ""
+
+#: ../includes/admin-page-system.php:6
+msgid "Sass variables"
+msgstr ""
+
+#: ../includes/admin-page-system.php:7
+msgid "Uninstall"
+msgstr ""
+
+#: ../includes/admin-page-system.php:38
+#, php-format
+msgid "Enable %s"
+msgstr ""
+
+#: ../includes/admin-page-system.php:42
+#, php-format
+msgid "Install %s"
+msgstr ""
+
+#: ../includes/admin-page-system.php:48
+msgid ""
+"The theme is aimed to work in cooperate with SiteOrigin's Page Builder. To "
+"see the full power of the theme, please enable/install the plugin."
+msgstr ""
+
+#: ../includes/admin-page-system.php:55 ../includes/admin-page-system.php:87
+msgid "Are sure?"
+msgstr ""
+
+#: ../includes/admin-page-system.php:56
+msgid "Install example layouts"
+msgstr ""
+
+#: ../includes/admin-page-system.php:65
+msgid "Clear CSS cache"
+msgstr ""
+
+#: ../includes/admin-page-system.php:88
+msgid "Delete all theme content and settings"
+msgstr ""
+
+#: ../includes/admin-page-system.php:93
+msgid "This will delete all theme settings and layouts"
+msgstr ""
+
+#: ../includes/admin-page-system.php:107
+msgid "Export theme settings"
+msgstr ""
+
+#: ../includes/admin-page-system.php:112
+msgid "Download current snapshot of Sassy theme configuration"
+msgstr ""
+
+#: ../includes/admin-page-system.php:115
+msgid "Download settings only"
+msgstr ""
+
+#: ../includes/admin-page-system.php:125
+msgid "Import Sassy settings from file"
+msgstr ""
+
+#: ../includes/admin-page-system.php:128
+msgid "All current settings will be overriden"
+msgstr ""
+
+#: ../includes/admin-page-system.php:132
+msgid "Import"
+msgstr ""
+
+#: ../includes/admin-page-system.php:137
+msgid "Delete all current existing layouts."
+msgstr ""
+
+#: ../includes/theme.php:230
+msgid "Sassy conditions"
+msgstr ""
+
+#: ../includes/theme.php:251
+msgid "Settings are imported successful."
+msgstr ""
+
+#: ../includes/theme.php:259
+msgid "CSS caches are cleared"
+msgstr ""
+
+#: ../includes/theme.php:265
+msgid "Example settings are imported"
+msgstr ""
+
+#: ../includes/theme.php:271
+msgid ""
+"All sassy settings (settings, layouts and compiled css files) are deleted. "
+"It could be called full Sassy uninstall."
+msgstr ""
+
+#: ../includes/theme.php:388
+msgid "Menu"
+msgstr ""
+
+#: ../includes/theme.php:459 ../includes/theme.php:460
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: ../includes/theme.php:546
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: ../includes/theme.php:710 ../includes/theme.php:716 ../includes/theme.php:722
+#, php-format
+msgid "Text in columns (%s)"
+msgstr ""
+
+#: ../includes/theme.php:728
+msgid "Widget title"
+msgstr ""
+
+#: ../includes/theme-settings.php:48
+msgid "Custom head metatags"
+msgstr ""
+
+#: ../includes/theme-settings.php:49
+msgid "just before &lt;/head&gt;"
+msgstr ""
+
+#: ../includes/theme-settings.php:54
+msgid "Custom head html"
+msgstr ""
+
+#: ../includes/theme-settings.php:55
+msgid "just after &lt;body&gt;"
+msgstr ""
+
+#: ../includes/theme-settings.php:60
+msgid "Custom footer html"
+msgstr ""
+
+#: ../includes/theme-settings.php:61
+msgid "just before &lt;/body&gt;"
+msgstr ""
+
+#: ../includes/theme-settings.php:66 ../includes/theme-settings.php:561
+msgid "Custom CSS"
+msgstr ""
+
+#: ../includes/theme-settings.php:75
+msgid "Process the CSS code through theme's SASS processor."
+msgstr ""
+
+#: ../includes/theme-settings.php:98
+msgid "Main Foreground color"
+msgstr ""
+
+#: ../includes/theme-settings.php:105
+msgid "Main Background color"
+msgstr ""
+
+#: ../includes/theme-settings.php:112
+msgid "Main links color"
+msgstr ""
+
+#: ../includes/theme-settings.php:121 ..
+#: /includes/integrations/woocommerce/woocommerce.php:547
+msgid "Theme color - primary"
+msgstr ""
+
+#: ../includes/theme-settings.php:128
+msgid "Theme color - secondary"
+msgstr ""
+
+#: ../includes/theme-settings.php:135
+msgid "Theme color - foreground"
+msgstr ""
+
+#: ../includes/theme-settings.php:142
+msgid "Theme color - background"
+msgstr ""
+
+#: ../includes/theme-settings.php:151
+msgid "Neutral theme color (active)"
+msgstr ""
+
+#: ../includes/theme-settings.php:158 ..
+#: /includes/integrations/woocommerce/woocommerce.php:546
+msgid "Neutral theme color (inactive)"
+msgstr ""
+
+#: ../includes/theme-settings.php:167
+msgid "Forms fields border"
+msgstr ""
+
+#: ../includes/theme-settings.php:174
+msgid "Forms fields foreground"
+msgstr ""
+
+#: ../includes/theme-settings.php:181
+msgid "Forms fields background"
+msgstr ""
+
+#: ../includes/theme-settings.php:188
+msgid "Forms button border"
+msgstr ""
+
+#: ../includes/theme-settings.php:195
+msgid "Forms button foreground"
+msgstr ""
+
+#: ../includes/theme-settings.php:202
+msgid "Forms button background"
+msgstr ""
+
+#: ../includes/theme-settings.php:216
+msgid "Justify text"
+msgstr ""
+
+#: ../includes/theme-settings.php:223
+msgid "Font Sizes"
+msgstr ""
+
+#: ../includes/theme-settings.php:235
+msgid "Letter space"
+msgstr ""
+
+#: ../includes/theme-settings.php:247
+msgid "Text line height"
+msgstr ""
+
+#: ../includes/theme-settings.php:259
+msgid "Word spacig"
+msgstr ""
+
+#: ../includes/theme-settings.php:271
+msgid "Font family"
+msgstr ""
+
+#: ../includes/theme-settings.php:278
+msgid "Add font from Google"
+msgstr ""
+
+#: ../includes/theme-settings.php:281 ../includes/theme-settings.php:299 ..
+#: /includes/theme-settings.php:310 ../includes/theme-settings.php:324 ..
+#: /includes/theme-settings.php:338 ../includes/layouts.php:759 ..
+#: /includes/widgets.php:600 ../includes/integrations/siteorigin-panels.php:629 ..
+#: /includes/integrations/siteorigin-panels.php:679 ..
+#: /includes/integrations/woocommerce/woocommerce.php:545
+msgid "None"
+msgstr ""
+
+#: ../includes/theme-settings.php:289
+msgid "Headings font family"
+msgstr ""
+
+#: ../includes/theme-settings.php:296
+msgid "Add font from Google to headings"
+msgstr ""
+
+#: ../includes/theme-settings.php:307
+msgid "Uppercase headings"
+msgstr ""
+
+#: ../includes/theme-settings.php:311
+msgid "All titles"
+msgstr ""
+
+#: ../includes/theme-settings.php:312
+msgid "Only H1...H6 headings"
+msgstr ""
+
+#: ../includes/theme-settings.php:313
+msgid "Widget titles"
+msgstr ""
+
+#: ../includes/theme-settings.php:320
+msgid "Paragraph styling"
+msgstr ""
+
+#: ../includes/theme-settings.php:323 ../includes/theme-settings.php:337 ..
+#: /includes/theme-settings.php:444 ../includes/layouts.php:927 ..
+#: /includes/layouts.php:1253 ../includes/integrations/siteorigin-panels.php:836 .
+#: ./includes/integrations/siteorigin-panels.php:850 ..
+#: /includes/integrations/woocommerce/woocommerce.php:522 ..
+#: /includes/integrations/woocommerce/woocommerce.php:535 ..
+#: /includes/integrations/woocommerce/woocommerce.php:602
+msgid "Default"
+msgstr ""
+
+#: ../includes/theme-settings.php:325
+msgid "Indent"
+msgstr ""
+
+#: ../includes/theme-settings.php:326
+msgid "Indent when more than one"
+msgstr ""
+
+#: ../includes/theme-settings.php:327
+msgid "Bottom margin"
+msgstr ""
+
+#: ../includes/theme-settings.php:334
+msgid "Word breaks"
+msgstr ""
+
+#: ../includes/theme-settings.php:339
+msgid "Break words"
+msgstr ""
+
+#: ../includes/theme-settings.php:340
+msgid "Break with hyphends"
+msgstr ""
+
+#: ../includes/theme-settings.php:349
+msgid "Form field whitespace"
+msgstr ""
+
+#: ../includes/theme-settings.php:361
+msgid "Form border size"
+msgstr ""
+
+#: ../includes/theme-settings.php:374
+msgid "Smooth scrolling"
+msgstr ""
+
+#: ../includes/theme-settings.php:377
+msgid "Disabled"
+msgstr ""
+
+#: ../includes/theme-settings.php:378
+msgid "Fast"
+msgstr ""
+
+#: ../includes/theme-settings.php:379
+msgid "Normal"
+msgstr ""
+
+#: ../includes/theme-settings.php:380
+msgid "Slow"
+msgstr ""
+
+#: ../includes/theme-settings.php:387
+msgid "Scroll to top button"
+msgstr ""
+
+#: ../includes/theme-settings.php:394
+msgid "Roundness"
+msgstr ""
+
+#: ../includes/theme-settings.php:395
+msgid ""
+"Roundness is set for some base elements, but layouts have options to use or "
+"not using it."
+msgstr ""
+
+#: ../includes/theme-settings.php:407
+msgid "Shadows"
+msgstr ""
+
+#: ../includes/theme-settings.php:421
+msgid "Allow attachments to have own pages"
+msgstr ""
+
+#: ../includes/theme-settings.php:427
+msgid "Show comment form notes"
+msgstr ""
+
+#: ../includes/theme-settings.php:434
+msgid "Show comments allowed tags"
+msgstr ""
+
+#: ../includes/theme-settings.php:441
+msgid "Comments time format"
+msgstr ""
+
+#: ../includes/theme-settings.php:445
+msgid "Human"
+msgstr ""
+
+#: ../includes/theme-settings.php:451
+msgid "Comment's avatar size"
+msgstr ""
+
+#: ../includes/theme-settings.php:469
+msgid "Read more string"
+msgstr ""
+
+#: ../includes/theme-settings.php:475
+msgid "Enable autocomplete in searches"
+msgstr ""
+
+#: ../includes/theme-settings.php:482
+msgid "Pagination style"
+msgstr ""
+
+#: ../includes/theme-settings.php:485 ../includes/theme-settings.php:499
+msgid "Border"
+msgstr ""
+
+#: ../includes/theme-settings.php:486
+msgid "Background"
+msgstr ""
+
+#: ../includes/theme-settings.php:487
+msgid "Colored background"
+msgstr ""
+
+#: ../includes/theme-settings.php:488 ../includes/theme-settings.php:498
+msgid "Clean"
+msgstr ""
+
+#: ../includes/theme-settings.php:495
+msgid "Tabs style"
+msgstr ""
+
+#: ../includes/theme-settings.php:500
+msgid "Colored"
+msgstr ""
+
+#: ../includes/theme-settings.php:557
+msgid "Advanced customization"
+msgstr ""
+
+#: ../includes/theme-settings.php:558
+msgid "General settings not related to the appearances and feel."
+msgstr ""
+
+#: ../includes/theme-settings.php:569
+msgid "Custom markup"
+msgstr ""
+
+#: ../includes/theme-settings.php:575
+msgid "Components"
+msgstr ""
+
+#: ../includes/theme-settings.php:576
+msgid "Settings that are not appearance related."
+msgstr ""
+
+#: ../includes/theme-settings.php:579
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../includes/theme-settings.php:585
+msgid "Logo and heading image"
+msgstr ""
+
+#: ../includes/theme-settings.php:591
+msgid "Appearance"
+msgstr ""
+
+#: ../includes/theme-settings.php:594
+msgid "Decoration"
+msgstr ""
+
+#: ../includes/theme-settings.php:599
+msgid "Typography"
+msgstr ""
+
+#: ../includes/helpers.php:154
+msgid "Can't create directory for css files."
+msgstr ""
+
+#: ../includes/helpers.php:240
+#, php-format
+msgid "Problem while processing the scss code [%s]."
+msgstr ""
+
+#: ../includes/helpers.php:414
+msgid "No breakpoint"
+msgstr ""
+
+#: ../includes/helpers.php:415
+msgid "1824px - Very Large Screens"
+msgstr ""
+
+#: ../includes/helpers.php:416
+msgid "1224px - Desktop and Laptop"
+msgstr ""
+
+#: ../includes/helpers.php:417
+msgid "1024px - Popular Tablet Landscape"
+msgstr ""
+
+#: ../includes/helpers.php:418
+msgid "960px - Netbooks"
+msgstr ""
+
+#: ../includes/helpers.php:419
+msgid "800px - New Tablet Portrait"
+msgstr ""
+
+#: ../includes/helpers.php:420
+msgid "768px - Popular Tablet Portrait"
+msgstr ""
+
+#: ../includes/helpers.php:421
+msgid "600px - Popular Breakpoint in Headway"
+msgstr ""
+
+#: ../includes/helpers.php:422
+msgid "568px - iPhone 5 Landscape"
+msgstr ""
+
+#: ../includes/helpers.php:423
+msgid "480px - iPhone 3 &amp; 4 Landscape"
+msgstr ""
+
+#: ../includes/helpers.php:424
+msgid "320px - iPhone 3 &amp; 4 &amp; 5 &amp; Android Portrait"
+msgstr ""
+
+#: ../includes/helpers.php:631
+msgid "Search for:"
+msgstr ""
+
+#: ../includes/layouts.php:282
+msgid "5455Y: Page element not found."
+msgstr ""
+
+#: ../includes/layouts.php:393 ../includes/layouts.php:1350
+msgid "Draft"
+msgstr ""
+
+#: ../includes/layouts.php:655 ../includes/layouts.php:658 ../includes/layouts.
+#: php:662 ../includes/layouts.php:1485
+msgid "Layouts"
+msgstr ""
+
+#: ../includes/layouts.php:656
+msgid "Site Layouts"
+msgstr ""
+
+#: ../includes/layouts.php:659
+msgid "Layout"
+msgstr ""
+
+#: ../includes/layouts.php:660
+msgid "Site layouts"
+msgstr ""
+
+#: ../includes/layouts.php:661
+msgid "Parent layout"
+msgstr ""
+
+#: ../includes/layouts.php:663
+msgid "View layout"
+msgstr ""
+
+#: ../includes/layouts.php:664
+msgid "Create layout"
+msgstr ""
+
+#: ../includes/layouts.php:665
+msgid "Design new layout"
+msgstr ""
+
+#: ../includes/layouts.php:666
+msgid "Edit layout"
+msgstr ""
+
+#: ../includes/layouts.php:667
+msgid "Update"
+msgstr ""
+
+#: ../includes/layouts.php:669
+msgid "No found"
+msgstr ""
+
+#: ../includes/layouts.php:670
+msgid "Not found in Trash"
+msgstr ""
+
+#: ../includes/layouts.php:757
+msgid "Use layout"
+msgstr ""
+
+#: ../includes/layouts.php:785
+#, php-format
+msgid ""
+"Seems that you have no defined any layouts. <a href=\"%s\">Do you want to "
+"install base set of layouts</a> or <a href=\"%s\">you might want to create "
+"manual by yourself</a>."
+msgstr ""
+
+#: ../includes/layouts.php:894 ../includes/layouts.php:1340
+msgid "Priority"
+msgstr ""
+
+#: ../includes/layouts.php:895
+msgid "Type"
+msgstr ""
+
+#: ../includes/layouts.php:896
+msgid "Name"
+msgstr ""
+
+#: ../includes/layouts.php:897
+msgid "Selection rule"
+msgstr ""
+
+#: ../includes/layouts.php:915 ../includes/layouts.php:1223
+msgid "Sub-menu"
+msgstr ""
+
+#: ../includes/layouts.php:919 ../includes/layouts.php:1218 ../includes/widgets.
+#: php:573
+msgid "Pages"
+msgstr ""
+
+#: ../includes/layouts.php:930 ../includes/layouts.php:1259
+msgid "Frontpage"
+msgstr ""
+
+#: ../includes/layouts.php:933 ../includes/layouts.php:1271
+msgid "Error 404"
+msgstr ""
+
+#: ../includes/layouts.php:936 ../includes/layouts.php:1265
+msgid "Login"
+msgstr ""
+
+#: ../includes/layouts.php:940 ../includes/layouts.php:948 ../includes/layouts.
+#: php:956
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: ../includes/layouts.php:940 ../includes/layouts.php:1278
+msgid "Single"
+msgstr ""
+
+#: ../includes/layouts.php:943
+#, php-format
+msgid "Single: %s"
+msgstr ""
+
+#: ../includes/layouts.php:948 ../includes/layouts.php:956 ../includes/layouts.
+#: php:1279
+msgid "Archive"
+msgstr ""
+
+#: ../includes/layouts.php:951
+#, php-format
+msgid "Archive Entry: %s"
+msgstr ""
+
+#: ../includes/layouts.php:959
+#, php-format
+msgid "Archive: %s"
+msgstr ""
+
+#: ../includes/layouts.php:970
+msgid "Not used"
+msgstr ""
+
+#: ../includes/layouts.php:1001
+msgid "Layout settings"
+msgstr ""
+
+#: ../includes/layouts.php:1002
+msgid "Attributes"
+msgstr ""
+
+#: ../includes/layouts.php:1058
+msgid "Box layout"
+msgstr ""
+
+#: ../includes/layouts.php:1064
+msgid "Cascading grid layout (masonry)"
+msgstr ""
+
+#: ../includes/layouts.php:1075
+msgid "Breakpoint width"
+msgstr ""
+
+#: ../includes/layouts.php:1085
+msgid "Remove"
+msgstr ""
+
+#: ../includes/layouts.php:1090 ../includes/integrations/siteorigin-panels.php:861
+msgid "Width"
+msgstr ""
+
+#: ../includes/layouts.php:1096
+msgid "Max width"
+msgstr ""
+
+#: ../includes/layouts.php:1103
+msgid "Horizontal margin"
+msgstr ""
+
+#: ../includes/layouts.php:1109
+msgid "Vertical margin"
+msgstr ""
+
+#: ../includes/layouts.php:1121
+msgid "Add breakpoint"
+msgstr ""
+
+#: ../includes/layouts.php:1126
+msgid "Mobile behavior breakpoint"
+msgstr ""
+
+#: ../includes/layouts.php:1191
+msgid "Global layout"
+msgstr ""
+
+#: ../includes/layouts.php:1212
+msgid "Layout type:"
+msgstr ""
+
+#: ../includes/layouts.php:1221
+msgid "Template"
+msgstr ""
+
+#: ../includes/layouts.php:1229
+msgid "Sub-layout of:"
+msgstr ""
+
+#: ../includes/layouts.php:1230
+msgid "Sub-layout of"
+msgstr ""
+
+#: ../includes/layouts.php:1238
+msgid "Export as post template"
+msgstr ""
+
+#: ../includes/layouts.php:1246
+msgid "Selection rule page type:"
+msgstr ""
+
+#: ../includes/layouts.php:1280
+msgid "Archive Entry"
+msgstr ""
+
+#: ../includes/layouts.php:1297
+#, php-format
+msgid "%s (default)"
+msgstr ""
+
+#: ../includes/layouts.php:1328
+msgid "Selection rule condition"
+msgstr ""
+
+#: ../includes/layouts.php:1329 ../includes/integrations/siteorigin-panels.php:
+#: 650 ../includes/integrations/siteorigin-panels.php:810
+msgid "Sassy condition rule"
+msgstr ""
+
+#: ../includes/layouts.php:1339
+msgid "Priority:"
+msgstr ""
+
+#: ../includes/layouts.php:1346
+msgid "Status"
+msgstr ""
+
+#: ../includes/layouts.php:1349
+msgid "Published"
+msgstr ""
+
+#: ../includes/layouts.php:1356
+msgid ""
+"Draft status is visible only by admins, it could be used for a testing and "
+"in development purposes. All non-admin users will skip draft layouts."
+msgstr ""
+
+#: ../includes/layouts.php:1368
+msgid "Move to Trash"
+msgstr ""
+
+#: ../includes/layouts.php:1376
+msgid "This layout have childrens and could not be moved to trash."
+msgstr ""
+
+#: ../includes/layouts.php:1506
+#, php-format
+msgid "Unnamed %s"
+msgstr ""
+
+#: ../includes/widgets.php:24
+msgid "(sassy) Header Logo"
+msgstr ""
+
+#: ../includes/widgets.php:32
+msgid "Max width:"
+msgstr ""
+
+#: ../includes/widgets.php:38
+msgid "Max height:"
+msgstr ""
+
+#: ../includes/widgets.php:71
+msgid "Front page"
+msgstr ""
+
+#: ../includes/widgets.php:101
+msgid "(sassy) User Profile"
+msgstr ""
+
+#: ../includes/widgets.php:113 ../includes/widgets.php:307 ../includes/widgets.
+#: php:400 ../includes/widgets.php:567 ../includes/widgets.php:638 ..
+#: /includes/widgets.php:711
+msgid "Title:"
+msgstr ""
+
+#: ../includes/widgets.php:120
+msgid "Hide for anonymous users"
+msgstr ""
+
+#: ../includes/widgets.php:124
+msgid "Style"
+msgstr ""
+
+#: ../includes/widgets.php:132
+msgid "Show menu in popup"
+msgstr ""
+
+#: ../includes/widgets.php:134
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: ../includes/widgets.php:187
+msgid "Log In"
+msgstr ""
+
+#: ../includes/widgets.php:189
+msgid "or"
+msgstr ""
+
+#: ../includes/widgets.php:189
+msgid "Register"
+msgstr ""
+
+#: ../includes/widgets.php:235
+msgid "(sassy) Breadcrumbs"
+msgstr ""
+
+#: ../includes/widgets.php:243
+msgid "Show home item"
+msgstr ""
+
+#: ../includes/widgets.php:249
+msgid "Delimeter char"
+msgstr ""
+
+#: ../includes/widgets.php:282
+msgid "(sassy) Archive items pagination"
+msgstr ""
+
+#: ../includes/widgets.php:299
+msgid "(sassy) Related posts"
+msgstr ""
+
+#: ../includes/widgets.php:349
+msgid "(sassy) Context placeholder"
+msgstr ""
+
+#: ../includes/widgets.php:350
+msgid ""
+"This is default context presenter, it display the children layouts or main "
+"content, so you need this widget in most cases."
+msgstr ""
+
+#: ../includes/widgets.php:358
+msgid "Add wrappers"
+msgstr ""
+
+#: ../includes/widgets.php:392
+msgid "(sassy) Pages Navigation"
+msgstr ""
+
+#: ../includes/widgets.php:487
+msgid "(sassy) Custom Menu"
+msgstr ""
+
+#: ../includes/widgets.php:487
+msgid "Add a custom menu to your sidebar."
+msgstr ""
+
+#: ../includes/widgets.php:562
+#, php-format
+msgid "No menus have been created yet. <a href=\"%s\">Create some</a>."
+msgstr ""
+
+#: ../includes/widgets.php:571
+msgid "Select Menu:"
+msgstr ""
+
+#: ../includes/widgets.php:584
+msgid "Depth:"
+msgstr ""
+
+#: ../includes/widgets.php:588
+msgid "Variant:"
+msgstr ""
+
+#: ../includes/widgets.php:590
+msgid "Simple"
+msgstr ""
+
+#: ../includes/widgets.php:591
+msgid "Horizontal"
+msgstr ""
+
+#: ../includes/widgets.php:592
+msgid "Vertical"
+msgstr ""
+
+#: ../includes/widgets.php:593
+msgid "Vertical tree"
+msgstr ""
+
+#: ../includes/widgets.php:594
+msgid "Accordion"
+msgstr ""
+
+#: ../includes/widgets.php:598
+msgid "Responsive variant:"
+msgstr ""
+
+#: ../includes/widgets.php:601
+msgid "Popup"
+msgstr ""
+
+#: ../includes/widgets.php:602
+msgid "Dropdown"
+msgstr ""
+
+#: ../includes/widgets.php:603
+msgid "Hamburger"
+msgstr ""
+
+#: ../includes/widgets.php:608
+msgid "Use theme main color"
+msgstr ""
+
+#: ../includes/widgets.php:614
+msgid "Show items description"
+msgstr ""
+
+#: ../includes/widgets.php:629
+msgid "(sassy) Login Form"
+msgstr ""
+
+#: ../includes/widgets.php:644
+msgid "Hide when logged in"
+msgstr ""
+
+#: ../includes/widgets.php:695
+msgid "(sassy) Post Content Element"
+msgstr ""
+
+#: ../includes/widgets.php:695
+msgid "Display various content elements from the current viewed post."
+msgstr ""
+
+#: ../includes/widgets.php:716
+msgid ""
+"Different element formatters could act with the title, use %title tag to do "
+"that."
+msgstr ""
+
+#: ../includes/widgets.php:719
+msgid "Element:"
+msgstr ""
+
+#: ../includes/widgets.php:740
+msgid "Hide default HTML wrappers"
+msgstr ""
+
+#: ../includes/widgets.php:746
+msgid "Hide widget when empty"
+msgstr ""
+
+#: ../includes/widgets.php:752
+msgid "Link this item to the post"
+msgstr ""
+
+#: ../includes/widgets.php:783
+msgid "Rewrite content:"
+msgstr ""
+
+#: ../includes/widgets.php:790
+msgid ""
+"Custom content to rewrite the value (supported variable tags %value, "
+"%value_plain_text, %title, %post_url). <strong>HTML tags are supported."
+"</strong>"
+msgstr ""
+
+#: ../includes/widgets.php:794
+msgid "No result value:"
+msgstr ""
+
+#: ../includes/widgets.php:913
+msgid "Title"
+msgstr ""
+
+#: ../includes/widgets.php:917
+msgid "Thumbnail"
+msgstr ""
+
+#: ../includes/widgets.php:921
+msgid "Thumbnail or Title"
+msgstr ""
+
+#: ../includes/widgets.php:925
+msgid "Meta"
+msgstr ""
+
+#: ../includes/widgets.php:929
+msgid "Excerpt"
+msgstr ""
+
+#: ../includes/widgets.php:933
+msgid "Content"
+msgstr ""
+
+#: ../includes/widgets.php:937
+msgid "Comments block"
+msgstr ""
+
+#: ../includes/widgets.php:940
+msgid "Post author bio"
+msgstr ""
+
+#: ../includes/widgets.php:946
+msgid "Custom post meta field"
+msgstr ""
+
+#: ../includes/widgets.php:949
+msgid "Field name"
+msgstr ""
+
+#: ../includes/widgets.php:950
+msgid "Override label"
+msgstr ""
+
+#: ../includes/widgets.php:956
+#, php-format
+msgid "Taxonomy - %s"
+msgstr ""
+
+#: ../includes/integrations/no-layouting-plugin.php:18
+msgid "Main"
+msgstr ""
+
+#: ../includes/integrations/no-layouting-plugin.php:28
+msgid "Sidebar widgets"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:624
+msgid "Row role"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:627
+msgid ""
+"Define the role of the row. Read more at <a href=\"http://www.w3.org/TR/wai-"
+"aria/roles#role_definitions\" target=\"_blank\">w3.org/TR/wai-aria/roles</a>."
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:647 ..
+#: /includes/integrations/siteorigin-panels.php:807
+msgid "Visibility rule"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:657 ..
+#: /includes/integrations/siteorigin-panels.php:817
+msgid "Hidding breakpoint"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:661 ..
+#: /includes/integrations/siteorigin-panels.php:821
+msgid "Hide the row when screen is smaller"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:666
+msgid "Will not work if layout is in box mode"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:674
+msgid "Sticky scroll"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:677
+msgid "The element will be sticky when page is scrolled."
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:680
+msgid "On top"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:681
+msgid "On top, hide by default"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:682
+msgid "On bottom"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:683
+msgid "On bottom, hide by default"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:690 ..
+#: /includes/integrations/siteorigin-panels.php:887
+msgid "Border line"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:698 ..
+#: /includes/integrations/siteorigin-panels.php:868
+msgid "Height"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:701 ..
+#: /includes/integrations/siteorigin-panels.php:871
+msgid "Set height if it is necessary."
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:707 ..
+#: /includes/integrations/siteorigin-panels.php:907
+msgid "Use theme shadows"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:708 ..
+#: /includes/integrations/siteorigin-panels.php:908
+msgid "If shadows are set, then it will be used for this element."
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:715 ..
+#: /includes/integrations/siteorigin-panels.php:915
+msgid "Use theme roundness"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:716 ..
+#: /includes/integrations/siteorigin-panels.php:916
+msgid "If roundness is set, then it will be used for this element."
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:825
+msgid "Breakpoint collapsible"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:829
+msgid "Make widget collapsible when screen is less than"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:833
+msgid "Element layout"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:837 ..
+#: /includes/integrations/siteorigin-panels.php:851
+msgid "Inline"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:838 ..
+#: /includes/integrations/siteorigin-panels.php:852
+msgid "Centered"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:839 ..
+#: /includes/integrations/siteorigin-panels.php:853
+msgid "Inline left"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:840 ..
+#: /includes/integrations/siteorigin-panels.php:854
+msgid "Inline right"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:847
+msgid "Element layout on mobile behavior"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:864
+msgid "Width of the widget."
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:878
+msgid "Margin"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:894
+msgid "Links color"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:900
+msgid "Style widget titles"
+msgstr ""
+
+#: ../includes/integrations/siteorigin-panels.php:934
+msgid "Sassy"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/functions.php:50
+msgid "View your shopping cart"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/functions.php:54
+#, php-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../includes/integrations/woocommerce/functions.php:72
+msgid "(sassy) WooCommerce wishlist"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:385
+msgid "Add to wishlist"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:386
+msgid "In your wishlist"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:387
+msgid "Remove from wishlist"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:399
+#, php-format
+msgid "Shipping from: %s"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:419 ..
+#: /includes/integrations/woocommerce/woocommerce.php:881
+msgid "Images"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:464
+msgid "WooCommerce Products catalog"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:468
+msgid "WooCommerce Product view"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:483
+msgid "Products per page in catalog"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:499
+msgid "All"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:505
+msgid "Products per row in catalog"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:517
+msgid "Show category title and description"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:521 ..
+#: /includes/integrations/woocommerce/woocommerce.php:534 ..
+#: /includes/integrations/woocommerce/woocommerce.php:571 ..
+#: /includes/integrations/woocommerce/woocommerce.php:583 ..
+#: /includes/integrations/woocommerce/woocommerce.php:603 ..
+#: /includes/integrations/woocommerce/woocommerce.php:614
+msgid "Hidden"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:523
+msgid "Outside"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:524
+msgid "In header"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:530
+msgid "Show title and category titles"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:536
+msgid "Before image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:542
+msgid "Show product border"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:548
+msgid "Only on hover"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:555
+msgid "Show ratings in product catalog"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:561
+msgid "Show prices in product catalog"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:567 ..
+#: /includes/integrations/woocommerce/woocommerce.php:610
+msgid "Sale label position"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:572 ..
+#: /includes/integrations/woocommerce/woocommerce.php:616
+msgid "Over image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:573
+msgid "After image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:574
+msgid "Top corner"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:580
+msgid "Show add to cart button in product catalog"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:584
+msgid "Button"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:585
+msgid "Hover"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:586
+msgid "Corner"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:598
+msgid "Show products title"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:604
+msgid "Before product image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:615
+msgid "After title"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:617
+msgid "In teaser"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:623
+msgid "Show teaser in product views"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:629
+msgid "Show ratings in product views"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:635
+msgid "Show product meta info"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:642
+msgid "Show wishlist actions"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:649
+msgid "Insert custom HTML"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:655
+msgid "Show lowest shiping price"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:662
+msgid "Show SKU on products"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:669
+msgid "Show quantity selector"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:676
+msgid "Move product images as new tab"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:698 ..
+#: /includes/integrations/woocommerce/woocommerce.php:777
+msgid "Header Image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:702 ..
+#: /includes/integrations/woocommerce/woocommerce.php:782
+msgid "Upload/Add image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:703 ..
+#: /includes/integrations/woocommerce/woocommerce.php:783
+msgid "Remove image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:726 ..
+#: /includes/integrations/woocommerce/woocommerce.php:807
+msgid "Choose an image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:728 ..
+#: /includes/integrations/woocommerce/woocommerce.php:809
+msgid "Use image"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:867
+msgid "WooCommerce Product Teaser"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:871
+msgid "WooCommerce Product Related"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:876
+msgid "WooCommerce Product Tabs"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:884
+msgid "Description"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:887
+msgid "Additional Information"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:890
+msgid "Reviews"
+msgstr ""
+
+#: ../includes/integrations/woocommerce/woocommerce.php:897
+#, php-format
+msgid "WooCommerce Product Tab: %s"
+msgstr ""
+
+#: ../templates/author-bio.php:7
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: ../templates/no-layout.php:71
+msgid "Tags: "
+msgstr ""

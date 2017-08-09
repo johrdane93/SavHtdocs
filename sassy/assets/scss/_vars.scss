@@ -1,0 +1,282 @@
+/**
+ * Basic variables
+ */
+
+
+// Main colors
+//  $appearance_color_foreground: #444;
+//  $appearance_color_background: #fff;
+//  $appearance_color_links: #00B819;
+
+// Theme colors
+
+// Main theme color
+//  $appearance_color_theme_primary: #00B819;
+//  $appearance_color_theme_secondary: #ff4d00;
+//  $appearance_color_theme_foreground: #eee;
+//  $appearance_color_theme_background: #444;
+
+// Neutral colors
+//  $appearance_color_theme_neutral_active: #00B819;
+//  $appearance_color_theme_neutral_inactive: #b3b3b3;
+
+// Status colors
+$appearance_color_status_inactive: #b3b3b3;
+$appearance_color_status_info: #4aa4da;
+$appearance_color_status_warning: #ac8122;
+$appearance_color_status_ok: #569200;
+$appearance_color_status_error: #ba2837;
+
+// Forms
+//  $appearance_form_spacing: .4em;
+//  $appearance_form_border: 2px;
+//  $appearance_form_field_border: #b3b3b3;
+//  $appearance_form_field_foreground: #4A5366;
+//  $appearance_form_field_background: transparent;
+//  $appearance_form_button_border: #00B819;
+//  $appearance_form_button_foreground: #fff;
+//  $appearance_form_button_background: #00B819;
+
+$appearance_form_field_highlight: $appearance_color_theme_neutral_active;
+$appearance_form_field_highlight: $appearance_color_theme_neutral_active;
+@if $appearance_form_field_foreground {
+  @if $appearance_form_field_background {
+    $appearance_form_field_highlight: mix($appearance_form_field_foreground, $appearance_form_field_background, 70%);
+  }
+}
+@if $appearance_form_button_foreground {
+  @if $appearance_form_button_background {
+    $appearance_form_button_highlight: mix($appearance_form_button_foreground, $appearance_form_button_background, 20%);
+  }
+}
+
+// RTL supporting variables.
+@if $appearance_typography_rtl {
+  $left: right;
+  $right: left;
+  $before: after;
+  $after: before;
+}
+@else {
+  $left: left;
+  $right: right;
+  $before: before;
+  $after: after;
+}
+
+/**
+ * Variable classes
+ */
+.no-select {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+
+// Shadows
+.box-shadow {
+  @if $decoration_shadow > 0 {
+    box-shadow: 1px 1px #{($decoration_shadow*2)}px rgba(0, 0, 0, ($decoration_shadow/10) );
+  }
+}
+.box-shadow-center {
+  @if $decoration_shadow > 0 {
+    box-shadow: 0 0 #{($decoration_shadow*5)}px rgba(0, 0, 0, ($decoration_shadow/8) );
+  }
+}
+.box-shadow-down {
+  box-shadow: 0 8px 20px -2px rgba(0, 0, 0, (30+$decoration_shadow)/90 );
+}
+.box-shadow-down-light {
+  box-shadow: 0 8px 20px -2px rgba(0, 0, 0, 0.12 );
+}
+.no-shadow {
+  box-shadow: none;
+}
+
+
+// Roundness
+@if $decoration_roundness < 1 {
+  $decoration_roundness: 0;
+}
+.roundness {
+  @if $decoration_roundness {
+    border-radius: #{$decoration_roundness*0.2}em;
+  }
+}
+.roundness-light {
+  @if $decoration_roundness {
+    border-radius: if($decoration_roundness > 5, 5, $decoration_roundness)*0.2+em;
+  }
+}
+.noroundness {
+  border-radius: 0;
+}
+.roundness-top {
+  @if $decoration_roundness {
+    border-radius: #{$decoration_roundness*0.2}em #{$decoration_roundness*0.2}em 0 0;
+  }
+}
+.roundness-bottom {
+  @if $decoration_roundness {
+    border-radius: 0 0 #{$decoration_roundness*0.2}em #{$decoration_roundness*0.2}em;
+  }
+}
+
+// Check .border classes
+.border {
+  border: 1px solid $appearance_color_theme_neutral_inactive;
+}
+.border-highlight {
+  border-color: $appearance_color_theme_neutral_active;
+}
+.noborder {
+  border: 0;
+}
+
+.clearfix {
+  clear: both;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+// 3d acceleration for next
+.gpu-accelerate3 {
+  /*activate the GPU for compositing each page */
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+
+input, textarea, select, div, li, span,
+article, aside, details, figcaption, figure, footer,
+header, main, menu, nav, section, summary {
+  // Because attaching to * sux
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+/**
+ * Animations
+ */
+@-webkit-keyframes rotating {
+  from{ -webkit-transform: rotate(0deg); }
+  to{ -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotating {
+  from{ -moz-transform: rotate(0deg); }
+  to{ -moz-transform: rotate(360deg); }
+}
+@keyframes rotating {
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+
+
+/**
+ * Messageboxes
+ */
+.message {
+  @include _message($appearance_color_status_inactive);
+}
+
+.message-info {
+  @include _message($appearance_color_status_info);
+}
+.status-info {
+  color: $appearance_color_status_info;
+}
+
+.message-warning {
+  @include _message($appearance_color_status_warning);
+}
+.status-warning {
+  color: $appearance_color_status_warning;
+}
+
+.message-ok {
+  @include _message($appearance_color_status_ok);
+}
+.status-ok {
+  color: $appearance_color_status_ok;
+}
+
+.message-error {
+  @include _message($appearance_color_status_error);
+}
+.status-error {
+  color: $appearance_color_status_error;
+}
+
+
+/**
+ * Modal box
+ */
+#sassyModalWindowOverlay {
+  @extend .gpu-accelerate3;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .65);
+  #sassyModalWindowContainer {
+    @extend .roundness-light;
+    outline: 0;
+    box-shadow: 0 0 32px -4px #000;
+    padding: 5%;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    background: $appearance_color_background;
+    color: $appearance_color_foreground;
+    font-size: 1.2em;
+  }
+}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-weight: normal;
+  text-rendering: auto;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  padding-right: .4em;
+  white-space: nowrap;
+}
+
+.fa-spin {
+  -moz-animation: rotating 700ms linear infinite;
+  -webkit-animation: rotating 700ms linear infinite;
+  animation: rotating 700ms linear infinite;
+}
+
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.fa-stack-1x,
+.fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.fa-stack-1x { line-height: inherit; }
+.fa-stack-2x { font-size: 2em; }
+.fa-inverse { color: $appearance_color_background; }

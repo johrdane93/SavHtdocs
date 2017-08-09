@@ -1,0 +1,9 @@
+/**
+ * FontAwesome Icons
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$theme_assets}/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('#{$theme_assets}/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,13 @@
+
+{% extends 'layout.html.twig' %}
+{% block content %}
+
+	<h1>Bonjour {{membre.pseudo | capitalize }}</h1>
+	<p>Votre email       : {{ membre.email | capitalize }}</p>
+	<p>Votre adresse     : {{ membre.adresse | capitalize }}</p>
+	<p>Votre code postal : {{ membre.code_postal | capitalize }}</p>
+	<p>Votre ville       : {{ membre.ville | capitalize }}</p>
+
+
+	 </div>
+{% endblock %}

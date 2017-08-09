@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 1 avec jQuery !</title>
+</head>
+<body>
+
+    <form id="MonFormulaire">
+        <input type="text" required placeholder="Nom et Prénom" id="nomcomplet">
+        <input type="submit" value="Je Valide">
+    </form>
+
+    <!-- CONSIGNE : Avec l'aide de jQuery, vous devrez :
+    
+        1. A la soumission du formulaire, cacher le formulaire puis :
+        2. Créer un élément <p>
+        3. Dans cet élément, afficher : Bonjour <nomcomplet> correspondant au nom saisie dans le formulaire.
+
+    Intégration de jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script>
+        // -- En JS :
+        //var MonFormulaire = document.getElementById('MonFormulaire');
+        //MonFormulaire.addEventListener('submit', maFonction);
+
+        // -- En JQ :
+        $('#MonFormulaire').on('submit', function(e) {
+            // -- J'annule l'action du submit
+            e.preventDefault();
+            $(this).replaceWith('<p>Bonjour ' + $("#nomcomplet").val() + ' !</p>');
+        });
+    </script>
+</body>
+</html>

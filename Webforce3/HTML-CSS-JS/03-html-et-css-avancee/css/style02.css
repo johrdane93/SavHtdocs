@@ -1,0 +1,306 @@
+/*ul li  {
+  
+    text-align: center;
+
+    newletter{
+      margin-right: 64%;
+    }*/
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)*/
+
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}*/
+body{
+    background-color: #151515;
+}
+/*attribution d'une police par defaut*/
+h1,h2,h3{
+    font-family: ;
+}
+.page{
+    width: 100%;
+    height:auto;
+    max-width: 1000px;
+    
+    /*decoration*/
+    margin: 40px auto 40px auto;
+    
+     
+   /* margin: 40px auto;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: auto;
+    margin-bottom: auto;*/
+    
+    
+}
+/*------------------------------------
+             topheader
+-------------------------------------------*/
+.topheader{
+    /*--dimension et positionnement--*/
+    width: 100%;
+    height: 30px;
+    float: left;
+      /*--decoration--*/
+    background: linear-gradient(180deg,#FFF,#EEE);
+    border-top-left-radius: 5px
+}
+.topheader p{
+     font-family: 'lato' , 'sans-serif';
+    text-align:right;
+    margin: 0 10px 0 0;
+    line-height: 30px;
+}
+.topheader p a{
+    color:dodgerblue;
+    text-decoration: none;
+    
+}
+.topheader p a:hover{
+    text-decoration: underline;
+}
+/*------------------------------------
+              Header
+-------------------------------------------*/
+    header{
+        width: 100%;
+        height: 130px;
+        float: left;
+        background-color: #fff;
+    }
+
+    .logo{
+        width: 30%;
+        height: auto;
+        float: left;
+    }
+
+    .logo img {
+        max-width: 100%;
+        margin-top: 10px;
+        margin-left: 10px;
+}
+/*------------------------------------
+              
+-------------------------------------------*/
+    nav{
+        width: 64%;
+        height: 100%;
+        float: left;
+    }
+
+    nav ul{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        
+    }
+
+    nav ul li{
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    nav ul li a {
+        font-family: 'lato',sans-serif;
+        font-size: 18px;
+        color: #000;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 125px;
+            
+        
+    }
+
+    nav ul li a:hover,
+    nav ul li.current a{
+        color: burlywood;
+    }
+/*---------------------------------------------------------------------
+                    projecteur
+--------------------------------------------------------------------------------*/
+#projecteur{
+    position: relative;
+    width: 100%;
+    float: left;
+}
+#projecteur img{
+    width: 100%;
+}
+aside{
+    width: 50%;
+    float: left;
+    height: auto;
+}
+article{
+    width: 50%;
+    float: left;
+    height: auto;
+    padding: 1% 5% 0% 5%;
+    box-sizing: border-box;
+}
+articel h6 {
+    text-align: center;
+    font-weight: normal;
+    
+}
+articel p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    
+}
+
+.partenaires{
+    width: 120%;
+    float: left;
+    position: relative;   
+    background-image: linear-gradient(180deg,#333 0%,#ffff99 30%);
+    margin-top: -4px;
+}
+.partenaires h2 {
+    font-weight: normal;
+    text-align: center;
+    
+}
+.partenaires ul{
+    margin: 0;
+    padding: 0;
+}
+.partenaires ul li {  
+    display: inline-block;
+    width: 100%;
+}
+.partenaires ul li img{
+    max-width: 100%;       
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+/*-------------------------------------------------------------
+                           PIED DE PAGE
+----------------------------------------------------------------------*/
+    footer{
+        /*--DIMendion & positionnement--*/
+        width: 100%;
+        height: 210px;
+        float: left;
+        background-color: #121315;
+        padding-top: 10px;
+    }
+    
+    .gmap{
+        width:calc(100% / 3);
+        float: left;
+        margin-left: 10px;
+    }
+    
+    .newletter{
+        width:calc( (100% / 3 ) - 10px );
+        float: left;
+        margin-left: 10px;
+        border-bottom-color: aqua;
+    }
+    
+    .contact{
+        width: calc( (100% / 3 ) - 10px );
+        float: left;
+/* margin-left: 10px;*/
+    }
+    .newletter form fieldset{
+        border: 2px solid #fff;
+        border-radius: 8px;
+        color:#ff3333;
+        height: 180px;
+        font-family: 'Spirax', cursive;
+    }
+    .newletter input[type=text],
+    .newletter input[type=email]{
+        width: 91%;
+        height: 25px;
+        padding:5px 10px;
+        margin-bottom: 5px;
+    
+    }
+
+    .newletter input[type=submit]{
+        width: 99%;
+        height: 35px;
+        margin-top: 0px;
+        border: 0;
+        background-color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+
+    }
+    .contact h3{
+        color: #fff;
+        text-align: center;
+        font-weight:normal;
+    }
+
+    .contact address {
+        color: #fff;
+       /* padding-left: 20px ;   
+        margin-top: -228px;*/
+        font-family: 'Spirax', cursive;
+
+    }
+
+    .contact address Strong {
+        font-size: 20px;
+    }
+
+    .contact address a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .contact address a:hover {
+        text-decoration: underline;
+
+    }
+    

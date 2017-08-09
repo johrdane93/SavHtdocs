@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+<div class="row">
+	<div class="col-md-3">
+		<p class="lead">Vêtements</p>
+		<div class="list-group">
+			<a class="list-group-item" href="{{ path('home') }}">Tous</a>
+			 {% for cat in categories %}
+				<a class="list-group-item" href="{{ path('boutique',{'categorie': cat.categorie})  }}">{{ cat.categorie }}</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class="row">
+			{% for produit in produits %}
+				<div class="col-sm-4">
+					<div class="thumbnail">
+						<!-- <a href=""><img src="photo/{{ produit.photo }}" width="130" height="100"/></a> -->
+						<a href="{ {{ path('produit' ,{'id' : produit.id_produit}) }}  }"><img src="{{ asset('photo/' ~ produit.photo ) }}" width="130" height="100"/></a>
+						<div class="caption">
+							<h4 class="pull-right">{{ produit.prix }}€</h4>
+							<h4>{{ produit.titre }}</h4>
+							<p>{{ produit.description }}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock %}

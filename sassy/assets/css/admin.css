@@ -1,0 +1,188 @@
+/**
+ * Admin panel CSS rules
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.misc-pub-sassy-layout:before,
+i.mce-i-icon {
+  font: normal 20px/1 'dashicons';
+  padding: 0;
+  vertical-align: middle;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: -2px;
+  padding-right: 2px;
+}
+.fa,
+#sassy-mce-fontawesome-charmap .charmap-char {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-weight: normal;
+  text-rendering: auto;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  white-space: nowrap;
+}
+
+
+details summary {
+  cursor: pointer;
+  outline: 0;
+}
+.no-select,
+details > summary,
+.sassy-layouts-selection-rule label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.notice.sassy-welcome-notice {
+  border-left: 4px solid #067193;
+  background: #3EB0D3;
+  color: #fff;
+  padding: 1em;
+}
+
+.widget-content details > summary {
+  cursor: pointer;
+  outline: none;
+  text-decoration: underline;
+}
+
+#poststuff h3 {
+  background: #f5f5f5;
+  color: #666;
+  border-bottom: 1px solid #dedede;
+}
+
+.misc-pub-sassy-layout {
+  margin-top: .6em;
+  padding-top: .6em;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+.misc-pub-sassy-layout:before {
+  display: inline-block;
+  padding: 0 2px 0 0;
+  top: 0;
+  left: -1px;
+  position: relative;
+  color: #82878c;
+  content: "\f489";
+}
+
+.form-table textarea {
+  resize: vertical;
+}
+
+/**
+ * Sassy layout settings
+ */
+.sassy-layouts-selection-rule {
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+}
+.sassy-layouts-selection-rule li
+.sassy-layouts-selection-rule ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sassy-layouts-selection-rule input {
+  vertical-align: bottom;
+}
+.sassy-layouts-selection-rule ul ul {
+  margin-left: 1.6em;
+}
+.sassy-selection-rule-condition textarea {
+  margin: .4em 0;
+  width: 100%;
+  min-height: 5em;
+  resize: vertical;
+}
+#sassy-layouts-layout-settings input,
+#sassy-layouts-layout-settings .button,
+#sassy-layouts-layout-settings button {
+  vertical-align: middle;
+}
+.sassy-layout-settings-field-box-wrapper-dimensions {
+  border: 1px solid #eee;
+  padding: .4em;
+  margin-bottom: .4em;
+}
+.sassy-layout-settings-field-box-wrapper-dimensions:first-child .sassy-layout-settings-dimensions-breakpoint-remove {
+  display: none;
+}
+.style-input-wrapper select {
+  max-width: 100%;
+}
+body.post-type-sassy-layouts #posts-filter .tablenav,
+body.post-type-sassy-layouts #posts-filter .search-box,
+body.post-type-sassy-layouts .so-switch-to-standard {
+  display: none !important;
+}
+
+body.post-type-sassy-layouts #wpbody-content > .wrap > h2:before {
+  content: "\f489";
+  font-family: "dashicons";
+  vertical-align: middle;
+  margin-right: .4em;
+}
+
+li#customize-control-custom_css textarea {
+  font: normal 11px "Lucida Console", Monaco, monospace;
+  min-height: 18em;
+  margin-left: -6%;
+  margin-right: -2%;
+  width: 108%;
+}
+
+body.post-type-sassy-layouts .column-menu_order {
+  width: 5em;
+  text-align: center;
+}
+
+body.post-type-sassy-layouts .column-type {
+  width: 10em;
+}
+
+/**
+ * Sassy's FontAwesome implementation
+ */
+#sassy-mce-fontawesome-charmap {
+  width: 600px;
+  height: 380px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#sassy-mce-fontawesome-charmap .charmap-char {
+  height: 1.8em;
+  width: 1.8em;
+  border: 1px solid #eee;
+  float: left;
+  line-height: 1.8em;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 5px 5px 0;
+  font-size: 1em;
+}
+
+/**
+ * Hide header and background menu items
+ */
+body.js #menu-appearance a[href$="header_image"],
+body.js #menu-appearance a[href$="background_image"] {
+  display: none;
+}

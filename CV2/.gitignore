@@ -1,0 +1,29 @@
+# Google Analytics #
+####################
+google*.html
+
+# Symfony2 #
+############
+
+# Bootstrap
+app/bootstrap.php.cache
+
+# Symfony directories
+vendor/*
+*/logs/*
+!app/logs/.gitkeep
+*/cache/*
+!app/cache/.gitkeep
+web/bundles/*
+web/components/*
+web/css/*
+web/js/*
+
+# Configuration files
+app/config/parameters.yml
+web/config.php
+
+# Compiled source #
+###################
+*.exe
+*.bin

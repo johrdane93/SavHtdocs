@@ -1,0 +1,256 @@
+/*dans cette feuille de style,je peut definire l'pparence  que je veut donner aus diffèrent élément qui composent ma page!
+
+###La sytaxe ###
+
+element {
+    propriete:valeur;
+    
+}
+### Cibler via la class de lelement###
+.Laclass{
+    propriete:valeur;
+}
+
+###Cibler via son id un element ###
+#MonID{
+    propriete:valeur
+}
+
+CONSIGNE :
+    1-Tous les liens de mon <header> son en noir
+    2-Non souligné
+    3-Affiché en ligne grace a la propriete "display"
+
+--------------------------------------------------------------------------------------------------------*/
+a,h1,h3{
+    font-family: 'Spirax', cursive; 
+}
+
+header {
+    color:#996633;
+    text-decoration:none;
+}
+/*------------------------------------------------------------------
+|cici , je cible toutes les liste presente dans mon <header>  |
+----------------------------------------------------------------------*/
+header ul{
+    margin: 0;
+    padding: 0;
+        
+}
+
+header ul li {
+    display: inline-block;
+    /*WITDH:me permet de definir la largeur de mon element*/
+    width: 317px;
+   /*all=igner mon texte daans son element*/
+    text-align: center;
+}    
+/*-----------------------------------------------------
+je soiaite que le lien soit rouge au passage de la souris
+-----------------------------------------------------------*/
+
+a: hover{
+    color:black;
+}
+
+/*-------------------------------------------------------------------
+je change la couleur de mon lien a l'interieur de la classe current .
+-----------------------------------------------------------------------*/
+header ul .current a{
+     color:#dd0613;
+}
+/*----------------------------------
+Style de la balisze <main> 
+---------------------------------------*/
+main{
+    /*Je veut définir la largeur de ma page*/
+    width: 100%;
+    /*mais je ne vais pas au dela de 960px*/
+    max-width: 1000px;
+    /*margin:<top/bottom> <left/right>*/
+    margin: 0 auto;
+    /*Je rajoute un fond blanc a ma page */
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #ff3333;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*----------------------------------------------------------
+--Je souaite changer la couleur du fond de ma page
+---------------------------------------------------------------*/
+
+body{
+    background-color: azure
+}
+/*--------------------------------------------------------------------------
+1-A mon <main>,je souaite ajouter une marge top/bottom de 40px;
+2-Ajouter avec la propriété "border-radius" un arondi de 5px à <main>.
+3-Puis grace à "box-shadow",ajouter une ombre  legere autour de <main>
+------------------------------------------------------------------------------*/
+main{
+/*-----------------------------------------------------------
+margin:<top><right><bottom><left>
+---------------------------------------------*/
+    margin: 80px auto 80px auto;
+    /*-- boerder radius permet de rajouter un arondi a mon element--*/
+   border-radius: 5px;
+    /*-------------------------------------------------------
+    box-shadow: applique une ombre a ma page 
+    box-shadow: offset-x | offset-y| blur-radius|color
+    ---------------------------------------------*/
+    box-shadow:9px 10px 12px #996633; 
+    /*-----------------------------------------------------------
+    J'plique une marge interne de 5px autour de mon main
+    -------------------------------------------------------------*/
+    padding: 5px;
+    /*------------------------------------------------------------
+    overflow avec la valeur hidden,va supprimer l'affichage 
+    de tous les élément qui depasse de main
+    -----------------------------------------------------------------*/
+    overflow: hidden;
+}
+section h1{
+/*--------------------------------------------------------------------
+    aligner mon titre
+-------------------------------------------------------------------*/
+    text-align: center;
+/*-------------------------------------------------------
+je souaite pas que mon titre soit en gras 
+------------------------------------------------------------*/    
+    font-weight: normal;
+/*-------------------------------------------------------
+    je souaite une bordure en bas de monn titre
+    solid : Ligne par defaut,dotted: petit-point,dashed:traits d'union
+------------------------------------------------------*/
+    border-bottom: 5px dashed #333;
+    
+}
+
+/*-----------------------------------------------------------
+                          Header                           
+----------------------------------------------------------------------*/
+header section{
+     width: 100%;
+    height: 102px;
+    background: url(../img/bannerV2.png)
+        }
+/*---------------------------------------------------------
+                         ILLUSTRATION et Arcticle
+---------------------------------------------------------------------*/
+
+section{
+    float: left;
+    width: 100%;
+}
+
+section aside{
+    width:50%;
+    height: auto;
+    float: left;
+}
+section aside img{
+    max-width: 100%
+}
+section article {
+    width:calc(50% - 20%);
+    height: auto;
+    float: left;
+/*1er possibilité :margin
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
+}*/
+/*2éme possibilité :margin*/
+    margin: 0 10px;
+    font-family: arial,sans-serif;
+    /*justifier le texte*/
+    text-align: 0 10px;
+}
+
+    /*section article p {}*/
+/*------------------------------------------------------------------
+                           PIED DE PAGE
+----------------------------------------------------------------------*/
+    footer{
+        /*--DIMendion & positionnement--*/
+        width: 100%;
+        height: 210px;
+        float: left;
+        background-color: #121315;
+        padding-top: 10px;
+    }
+    
+    .gmap{
+        width:calc(100% / 3);
+        float: left;
+        margin-left: 10px;
+    }
+    
+    .newletter{
+        width:calc( (100% / 3 ) - 10px );
+        float: left;
+        margin-left: 10px;
+        border-bottom-color: aqua;
+    }
+    
+    .contact{
+        width: calc( (100% / 3 ) - 10px );
+        float: left;
+/* margin-left: 10px;*/
+    }
+    .newletter form fieldset{
+        border: 2px solid #fff;
+        border-radius: 8px;
+        color:#ff3333;
+        height: 180px;
+        font-family: 'Spirax', cursive;
+    }
+    .newletter input[type=text],
+    .newletter input[type=email]{
+        width: 91%;
+        height: 25px;
+        padding:5px 10px;
+        margin-bottom: 5px;
+    
+    }
+
+    .newletter input[type=submit]{
+        width: 99%;
+        height: 35px;
+        margin-top: 0px;
+        border: 0;
+        background-color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+
+    }
+.contact h3{
+    color: #fff;
+    text-align: center;
+    font-weight:normal;
+}
+
+.contact address {
+    color: #fff;
+   /* padding-left: 20px ;   
+    margin-top: -228px;*/
+    font-family: 'Spirax', cursive;
+    
+}
+
+.contact address Strong {
+    font-size: 20px;
+}
+
+.contact address a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact address a:hover {
+    text-decoration: underline;
+    
+}

@@ -1,0 +1,608 @@
+/**
+ * Documnet
+ */
+body {
+
+  text-align: $left;
+  font-size: #{$appearance_typography_font_size}px;
+  font-weight: normal;
+
+  @if $appearance_typography_fontfamily {
+    @if $appearance_typography_gfontfamily {
+      font-family: "#{$appearance_typography_gfontfamily}", $appearance_typography_fontfamily;
+    }
+    @else {
+      font-family: $appearance_typography_fontfamily;
+    }
+  }
+  @if $appearance_typography_lineheight {
+    line-height: #{$appearance_typography_lineheight/10}em;
+  }
+  @if $appearance_typography_letterspace {
+    letter-spacing: #{$appearance_typography_letterspace/100}em;
+  }
+  @if $appearance_typography_wordspacing {
+    word-spacing: #{$appearance_typography_wordspacing/10}em;
+  }
+  white-space: normal;
+
+  color: $appearance_color_foreground;
+  background: $background_color no-repeat 50% 0;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+
+  @if $appearance_typography_rtl {
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+
+}
+
+img {
+  -webkit-crisp-edges: crisp-edges;
+  -moz-crisp-edges: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: optimizeQuality;
+}
+
+a {
+  color: $appearance_color_links;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+a:hover abbr {
+  border-bottom-width: 0;
+}
+
+h1 {
+  font-size: 2.6em;
+  line-height: 1.2308;
+}
+h2 {
+  font-size: 2.24em;
+  line-height: 1.25;
+}
+h3 {
+  font-size: 1.8em;
+  line-height: 1.1852;
+}
+h4 {
+  font-size: 1.58em;
+  line-height: 1.4545;
+}
+h5 {
+  font-size: 1.30em;
+  line-height: 1.2632;
+}
+h6 {
+  font-size: 1.12em;
+  line-height: 1.2632;
+}
+
+h1, h2, h3, h4, h5, h6,
+.entry-header-title, .widget-title {
+  @if $appearance_typography_gfontfamily_headings {
+    font-family: "#{$appearance_typography_gfontfamily_headings}", $appearance_typography_fontfamily_headings;
+  }
+  @else {
+    font-family: $appearance_typography_fontfamily_headings;
+  }
+  clear: both;
+  font-weight: 300;
+  @if $appearance_typography_lineheight > 0 {
+    margin: .4em 0;
+  }
+  @else {
+    margin: 0;
+  }
+  // Because OR not working with scss
+  @if $appearance_typography_uppercase == all {
+    text-transform: uppercase;
+  }
+  @if $appearance_typography_uppercase == headings {
+    text-transform: uppercase;
+  }
+}
+
+p {
+
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  padding: .6em 0;
+  overflow: hidden;
+
+  @if $appearance_typography_paragraphs == none {
+    margin: 0;
+  }
+  @else if $appearance_typography_paragraphs == indent {
+    text-indent: 1em;
+  }
+  @else if $appearance_typography_paragraphs == margin {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  @if $appearance_typography_text_justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+}
+
+@if $appearance_typography_paragraphs == indentmore {
+  p + p {
+    text-indent: 1em;
+  }
+}
+
+@if $appearance_typography_wordbreak {
+  p, div, ul, dl, form {
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphenate: auto;
+  }
+}
+
+details > summary {
+  cursor: pointer;
+}
+
+ul,
+ol {
+  margin: 0 0 1.6em 1.3333em;
+  padding-left: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+dl {
+  margin-bottom: 1.6em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.6em;
+}
+
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: $appearance_color_background;
+  background-color: rgba($appearance_color_foreground, .8);
+  border-radius: 3px;
+  box-shadow: inset 1px -1px 1px rgba($appearance_color_foreground, 0.25);
+}
+
+figure {
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 1em;
+}
+
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: left;
+}
+.text-align-center {
+  text-align: left;
+}
+.alignleft {
+  display: inline;
+  float: left;
+  margin-left: 0;
+  margin-right: .6em;
+  clear: left;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-right: 0;
+  margin-left: .6em;
+  clear: right;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.assistive-text {
+  *clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+/**
+ * Only for entries (posts)
+ */
+.entry-content {
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .columns-text {
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1em;
+    -moz-column-count: 3;
+    -moz-column-gap: 1em;
+    column-count: 3;
+    column-gap: 1em;
+    vertical-align: top;
+  }
+
+  .columns2-text {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 1em;
+    -moz-column-count: 2;
+    -moz-column-gap: 1em;
+    column-count: 2;
+    column-gap: 1em;
+    vertical-align: top;
+  }
+
+  .columns4-text {
+    -webkit-column-count: 4;
+    -webkit-column-gap: 1em;
+    -moz-column-count: 4;
+    -moz-column-gap: 1em;
+    column-count: 4;
+    column-gap: 1em;
+    vertical-align: top;
+  }
+
+  li img {
+    vertical-align: middle;
+    margin: 0 .4em 0 0;
+  }
+
+  hr {
+    clear: both;
+    zoom: 1;
+    border: 0;
+    opacity: .6;
+    color: $appearance_color_theme_neutral_inactive;
+  }
+
+  q {
+    font-style: oblique;
+    font-size: 1.1em;
+  }
+
+  blockquote {
+    border-left: 3px solid $appearance_color_theme_primary;
+    overflow: hidden;
+    position: relative;
+    margin: 1em 1%;
+    padding: .6em;
+    font-size: 1.4em;
+    font-style: italic;
+    line-height: 1.25em;
+  }
+
+  .media-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  table {
+    @extend .roundness-light;
+    @extend .border;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 0 1.6em;
+    table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  thead th {
+    background: rgba($appearance_color_theme_neutral_inactive, 0.2);
+  }
+  td, th {
+    @extend .border;
+    padding: .4em;
+    border-left: 0;
+    border-top: 0;
+  }
+  table > tr > td:last-child,
+  table > tr > th:last-child,
+  table > tfoot > tr:first-child td,
+  table > tfoot > tr:first-child th, {
+    @extend .border;
+    border-left: 0;
+  }
+  table > tfoot > tr:first-child :last-child,
+  table > thead > tr > :last-child,
+  table > tbody > tr > :last-child,
+  table > tfoot > tr > :last-child {
+    border-right: 0;
+  }
+  table > tr:last-child > td,
+  table > tr:last-child > th,
+  table > tbody > tr:last-child > td,
+  table > tbody > tr:last-child > th,
+  table > tfoot > tr:last-child > td,
+  table > tfoot > tr:last-child > th {
+    border-bottom: 0;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .entry-content figure {
+    display: block;
+    width: 100% !important;
+    float: none;
+    clear: both;
+    text-align: center;
+  }
+  .entry-content img {
+
+  }
+}
+
+.comments-comment img,
+.widget img,
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+img.size-full {
+  width: auto;
+}
+img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+.comment-content img[height],img[class*="align"],img[class*="wp-image-"] {
+  height: auto;
+}
+.wp-caption-text {
+  opacity: .8;
+  font-size: .8em;
+  line-height: 1.2em;
+}
+
+/**
+ * Galleries
+ */
+.gallery {
+  margin-bottom: 1.6em;
+}
+
+.gallery-item {
+  display: inline-block;
+  padding: 1.79104477%;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-icon img {
+  margin: 0 auto;
+}
+
+.gallery-caption {
+  opacity: .7;
+  display: block;
+  font-size: .8em;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none;
+}
+
+
+/**
+ * Forms
+ */
+form {
+}
+.button, button, input, textarea, select, .wp-editor-container {
+  vertical-align: baseline;
+  @if $appearance_typography_letterspace {
+    letter-spacing: #{$appearance_typography_letterspace/100}em;
+  }
+  @if $appearance_typography_wordspacing {
+    word-spacing: #{$appearance_typography_wordspacing/10}em;
+  }
+  @if $appearance_form_field_background {
+    background: $appearance_form_field_background;
+  }
+  @if $appearance_form_field_foreground {
+    color: $appearance_form_field_foreground;
+  }
+  @if $appearance_form_spacing {
+    padding: #{$appearance_form_spacing/10}em;
+  }
+  @if $appearance_form_border {
+    border: #{$appearance_form_border}px solid $appearance_form_field_border;
+  }
+  outline: 0;
+  box-sizing: border-box;
+  line-height: 1.2em;
+}
+.select2-container .select2-choice {
+  @extend .roundness-light;
+  max-width: 98%;
+
+  @if $appearance_form_border {
+    border: #{$appearance_form_border}px solid $appearance_form_field_border;
+  }
+  @else {
+    border: 0;
+  }
+
+  >.select2-chosen {
+    @if $appearance_form_spacing {
+      padding: #{$appearance_form_spacing}px 0;
+    }
+  }
+}
+.select2-search input {
+  margin-top: .5em;
+}
+.select2-drop {
+  @extend .box-shadow-down;
+}
+input, textarea, select {
+  @extend .roundness-light;
+  background-color: transparent;
+}
+textarea {
+  @extend .roundness-light;
+  overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+  vertical-align: top; /* Improves readability and alignment in all browsers */
+  width: 99.9%;
+  min-height: 8em;
+  resize: vertical;
+  @if $appearance_typography_wordspacing {
+    word-spacing: #{$appearance_typography_wordspacing/10}em;
+  }
+}
+select, input[type="radio"], input[type="checkbox"], button, input[type="reset"], input[type="submit"], .button {
+  cursor: pointer;
+}
+select {
+  max-width: 98%;
+  height: 2.4em;
+}
+.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  @extend .roundness;
+  -webkit-appearance: none; /* Corrects inability to style clickable 'input' types in iOS */
+  -moz-appearance: none;
+  vertical-align: baseline;
+  text-decoration: none;
+
+  @if $appearance_form_button_background {
+    background: $appearance_form_button_background;
+  }
+  @if $appearance_form_button_foreground {
+    color: $appearance_form_button_foreground;
+  }
+  @if $appearance_form_border {
+    border: #{$appearance_form_border}px solid $appearance_form_button_border;
+  }
+}
+a.button {
+  color: $appearance_form_button_foreground !important;
+  display: inline-block;
+}
+input:focus,select:focus,textarea:focus {
+  border-color: $appearance_form_field_highlight;
+}
+.button:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus,
+.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+  border-color: $appearance_form_button_highlight;
+  background-color: $appearance_form_button_highlight;
+  text-decoration: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0; /* Addresses excess padding in IE8/9 */
+}
+//input[type="search"] {
+//  -webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+//}
+//input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+//  -webkit-appearance: none;
+//}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+label {
+  padding-bottom: .4em;
+}

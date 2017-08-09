@@ -1,0 +1,76 @@
+/**
+ * Wrappers
+ */
+
+.wrapper,
+.the-wrapper {
+  margin: 0 auto;
+}
+
+
+/**
+ * Layouts
+ */
+.the-wrapper-box {
+  @extend .box-shadow-center;
+  @extend .roundness-light;
+  margin-left: auto;
+  margin-right: auto;
+  background: $appearance_color_background;
+  position: relative;
+}
+
+.wrapper {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.wrapper-full-stretched {
+  width: auto !important;
+  max-width: 100% !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+.wrapper-full {
+  max-width: 100% !important;
+}
+
+.sassy-view-loop {
+  .widget_sassy_main_loop {
+    // TODO deal with inline-block whitespace
+    //letter-spacing: -.4em;
+    .the-wrapper-box {
+      //// reset leter spacing.
+      //@if $appearance_typography_letterspace {
+      //  letter-spacing: #{$appearance_typography_letterspace/100}em;
+      //}
+      //@else {
+      //  letter-spacing: initial;
+      //}
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  .archive-entry {
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+  }
+}
+
+.sticky-scroll-process {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+.sticky-scroll-top,
+.sticky-scroll-top-hidden {
+  top: 0;
+}
+.sticky-scroll-bottom,
+.sticky-scroll-bottom-hidden {
+  bottom: 0;
+}

@@ -1,0 +1,2 @@
+a<span class='pseudo' style="color:#f78b00;">SaMaSaMa</span><span>SaMaSaMa a rejoint la salle</span><span class='time'>10:47</span>
+<span class='pseudo' style="color:#f78b00;">SaMaSaMa</span><span>YO Poto </span><span class='time'>10:47</span>

@@ -1,0 +1,199 @@
+body{
+    background-color: black;
+}
+/*----------------------------------
+          NAVBAR APPLE
+----------------------------------------*/
+
+.navbar-apple{
+    background:#1e1e1e;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+navbar-apple ul li a{
+    font-family: 'Roboto condensed',sans-serif;
+    font-weight: 400;
+}
+.navbar-brand {
+    color: #fff; !important;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+/*---------------------------------
+          section Mobile
+-------------------------------*/
+
+#mobile {
+    background: #141414;
+    
+}
+
+#mobile ul { 
+    padding: 10px 0;
+}
+
+#mobile ul li {
+    padding: 0 15px;
+}
+/*------------------------------
+        Section projecteur
+----------------------------*/
+
+#projecteur{
+    
+    text-align: center;
+
+}    ;
+#projecteur h2{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color:#FFF;
+}
+#projecteur h3{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    color:#FFF;
+    
+}
+#projecteur p{
+    color: #CCC;
+}
+
+/*----------------------------
+     section iphone
+---------------------------------*/
+
+
+#iphone{
+    background-image: #fff 0%,#eee 100%;
+    padding:40px 0 0 0;
+    
+}
+#iphone article{
+    text-align: center;
+}
+#iphone article h3{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color:#303236;
+    margin: 40px 0;
+}
+
+#iphone article p{
+    margin: 40px 0;
+}
+
+/*----------------------------------------------------
+                   section contact
+----------------------------------------------*/
+
+#contact{
+    padding: 100px 0;
+}
+
+#contact h3{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+
+
+#contact .form-group:nth-child(2) > div:first-child{
+    padding-right: 7.5px;
+    
+}
+
+
+#contact .form-group:nth-child(2) > div:nth-child(2){
+    padding-left: 7.5px;
+    
+}
+
+/*---------------------------------------------------------
+                  footer
+----------------------------------------------------*/
+footer{
+    background-color: #1e1e1e;
+    padding: 10px 0;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: "fff";
+    font-size: 12px;
+    
+}
+
+@media only screen and (max-width:992px) {
+    #mobile ul li{
+        width: calc(100% / 4 );
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #mobile ul li{
+        width: calc( 100% / 3 );
+    }
+    #iphone{
+        padding: 40px 0;
+    }
+    #iphone img{
+        margin: 0 auto !important;
+    }
+    #contact input[type=email]{
+        margin-bottom: 15px;
+    }
+    #contact .form-group:nth-child(2) > div:first-child{
+        padding-right: 15px;
+    }
+    #contact .form-group:nth-child(2) > div:nth-child(2){
+        padding-left: 15px
+}
+
+
+@media only screen and (max-width:480px) {
+    #mobile ul li{
+        width: calc( 100% / 2 );
+    }
+}
+
+@media only screen and (max-width:320px) {
+   /* #mobile ul li{
+        width: calc( 100% / 1);
+    }*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

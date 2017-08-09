@@ -1,0 +1,330 @@
+/* ---------------------------
+Dans cette feuille de style CSS, je vais pouvoir définir l'apparence que je veux donner aux différents éléments qui composent ma page !
+
+### La Syntaxe ###
+
+element {
+    propriete:valeur;
+}
+
+### Cibler via la Classe de l'élément ###
+
+.LaClasse {
+    propriete:valeur;
+}
+
+### Cibler via son ID un élément ###
+
+#MonID {
+    propriete:valeur;
+}
+
+CONSIGNE : 
+
+    1 - Tous les liens de mon <header> sont en Noir
+    2 - Non souligné
+    3 - Affiché en Ligne grâce à la propriété "display"
+
+--------------------------- */
+
+a, h1, h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+/* ----------------------------------------------------------
+Ici, je cible toutes les listes présentent dans mon <header>
+------------------------------------------------------------ */
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    /* -- WIDTH : me permet de définir la largeur de mon élément -- */
+    width: 317px;
+    /* -- Aligner mon texte dans son élément -- */
+    text-align: center;
+}
+
+/* ----------------------------------------------------------
+Je souhaite que mes liens soient rouge au passage de la souris
+------------------------------------------------------------ */
+
+a:hover {
+    color: #dd0613;
+}
+
+/* ----------------------------------------------------------
+Je change la couleur de mon lien à l'intérieur de la classe current.
+------------------------------------------------------------ */
+header ul .current a {
+    color: #dd0613;
+}
+
+/* ----------------------------------------------------------
+Style de la balise <main>
+------------------------------------------------------------ */
+
+main {
+    /* -- Je veux définir la largeur de ma page -- */
+    width: 100%;
+    
+    /* -- Mais, je ne vais pas au-dela de 960px -- */
+    max-width: 960px;
+    
+    /* -- margin : <top/bottom> <left/right> -- */
+    margin: 0 auto;
+    
+    /* -- Je Rajoute un fond blanc à ma page -- */
+    background: #FFF;
+    
+}
+
+/* ----------------------------------------------------------
+Je souhaite changer la couleur du fond de ma page
+------------------------------------------------------------ */
+
+body {
+    background-color: #EEE;
+}
+
+/* ----------------------------------------------------------
+CONSIGNE :
+
+    1 - A <main>, je souhaite ajouter une marge top/bottom de 60px;
+    2 - Ajouter avec la propriété "border-radius" un arondi de 5px à <main>.
+    3 - Puis, grâce à "box-shadow", ajouter une ombre LEGERE autour de <main>
+------------------------------------------------------------ */
+
+main {
+    /* -- margin: <top> <right> <bottom> <left> -- */
+    margin: 80px auto 80px auto;
+    
+    /* -- border-radius me permet de rajouter un arondi à mon élément  -- */
+    border-radius: 5px;
+    
+    /* -- box-shadow applique une ombre autour de ma page (<main>) -- */
+    /* -- box-shadow: offset-x | offset-y | blur-radius | color -- */    
+    box-shadow: 0px 0px 15px #CCC;
+    
+    /* -- J'applique une marge interne de 5px autour de mon <main> -- */
+    padding: 5px;
+    
+    /* -- Overflow avec la valeur hidden, va supprimer l'affichage de tous les éléments qui dépasse du main -- */
+    overflow: hidden;
+}
+
+section h1 {
+    /* -- Aligner mon titre au milieu -- */
+    text-align: center;
+    
+    /* -- Je ne souhaite pas que mon titre soit en gras -- */
+    font-weight: normal;
+    
+    /* -- Je souhaite une bordure en bas de mon titre -- */
+    /* -- solid : Ligne par défaut, dotted : Petits-Points, dashed : des traits d'union -- */
+    border-bottom: 1px dashed #000;
+}
+
+/* ----------------------------------------------------------
+/* ----------------------------------------------------------
+                            HEADER
+------------------------------------------------------------ */
+
+header section {
+    width: 100%;
+    height: 359px; /* -- Adapter la hauteur à votre image -- */
+    /*background: url(../img/bandeau-isen.jpg) no-repeat;*/
+    position: relative;
+}
+
+header section img:first-child {
+    width: 100%;
+    height: 359px; /* -- Adapter la hauteur à votre image -- */
+    object-fit: cover;
+}
+
+header section img.logo {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+/* ----------------------------------------------------------
+                    ILLUSTRATION et ARTICLE
+------------------------------------------------------------ */
+
+
+section aside {
+    width: 50%;
+    height: auto;
+    float: left;
+    position: relative;
+}
+
+section aside img {
+    max-width: 100%;
+}
+
+section aside img.loupe {
+    width: 50px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+section article {
+    width: calc(50% - 20px);
+    height: auto;
+    float: left;
+    /* -- 1ère possibilité : padding 
+    padding: 0 10px 0 10px;
+    box-sizing: border-box; -- */
+    
+    /* -- 2ème possibilité : margin -- */
+    margin: 0 10px;
+    font-family: Arial, sans-serif;
+    /* -- Justifié le texte -- */
+    text-align: justify;
+}
+
+section article.contenu-page {
+    width: calc(100% - 20px);
+}
+
+section article img {
+    max-width: 100%;
+}
+
+/* ----------------------------------------------------------
+                        FORMULAIRE DE CONTACT
+------------------------------------------------------------ */
+ 
+article.contenu-page form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+article.contenu-page form input,
+article.contenu-page form select
+{
+    width: 100%;
+    height: 34px;
+}
+
+/* ----------------------------------------------------------
+                        PIED DE PAGE
+------------------------------------------------------------ */
+
+footer {
+    /* -- Dimension & Positionnement -- */
+    width: 100%;
+    height: 210px;
+    float: left;
+    
+    /* -- Décoration -- */
+    background-color: #121315;
+    padding-top: 10px;
+}
+
+.gmap {
+    width: calc( (100% / 3) - 10px );
+    float: left;
+    margin-left: 10px;
+}
+
+.newsletter {
+    width: calc( (100% / 3) - 10px );
+    float: left;
+    margin-left: 10px;
+}
+
+.contact {
+	width: calc(100% / 3);
+    float: left;
+}
+
+/* ------------------------------------
+                NEWSLETTER
+------------------------------------- */
+
+.newsletter form fieldset {
+    font-family: 'Roboto Condensed', sans-serif;
+	border:2px solid #FFF;
+    border-radius: 8px;
+    color: #FFF;
+    height: 180px;
+}
+
+.newsletter input[type=text],
+.newsletter input[type=email] {
+    width: 91%;
+    height: 25px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.newsletter input[type=submit] {
+	width: 99%;
+    height: 35px;
+    margin-top: 0px;
+    border: 0;
+    background-color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ------------------------------------
+                CONTACT
+------------------------------------- */
+
+.contact h3 {
+    color: #FFF;
+    text-align: center;
+    font-weight: normal;
+}
+
+.contact address {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #FFF;
+    padding-left: 20px;
+}
+
+.contact address strong {
+    font-size: 20px;    
+}
+
+.contact address a {
+	color: #FFF;
+    text-decoration: none;
+}
+
+.contact address a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

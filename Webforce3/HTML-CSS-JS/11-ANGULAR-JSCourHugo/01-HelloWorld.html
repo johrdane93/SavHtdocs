@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes premiers pas en Angular JS</title>
+    <!-- Chargement du Script Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+</head>
+<!--
+    ng-app : L'Attribut ng-app est ce que l'on appel une "Directive".
+    Il signale à AngularJS le début de notre Application.
+-->
+<body ng-app>
+    <h1>Mes Premiers pas...</h1>
+    <div>
+        <p>
+            <!--
+                ng-model : La Directive ng-model permet de créer dans notre Application (ng-app) une "variable" appelé "nomcomplet" qui prendra la valeur saisie par l'utilisateur.
+                # ------------------------------------------------ #
+                Cette opération magique est entièrement géré par AngularJS
+                Cette variable "nomcomplet" est accessible dans l'ensemble du "$scope" de l'application (ng-app).
+            -->
+            <input type="text" ng-model="nomcomplet" name="nomcomplet"
+                placeholder="Saisissez votre Nom et Prénom...">
+        </p>
+        <!-- On utilise ensuite une {{ expression }} pour afficher le contenu de la variable dans l'application.
+        Tout ce qui est entre les doubles accolades sera interprété par AngularJS -->
+        <h3>Bonjour {{nomcomplet}} !</h3>
+    </div>
+</body>
+</html>

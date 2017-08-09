@@ -1,0 +1,100 @@
+/**
+ * SiteOrigin slider
+ */
+.sow-slider-base ul.sow-slider-images li.sow-slider-image.sow-slider-image-cover {
+  @extend .roundness-light;
+}
+
+
+/**
+ * Image widgets
+ */
+.widget_sow-image img,
+.widget_image img {
+  display: block;
+}
+
+
+/**
+ * SiteOrigin widgets price
+ */
+.widget_sow-price-table {
+  background: transparent;
+}
+
+
+/**
+ * SiteOrigin widget feature list
+ */
+.sow-features-list {
+  margin: 0;
+}
+
+
+/**
+ * SiteOrigin widgets social icons
+ */
+.mobile-behavior .widget-mobile-inline-center .social-media-button-container {
+  text-align: center !important;
+}
+
+/**
+ * SiteOrigin widget post carousel
+ */
+.widget_sow-post-carousel {
+  background: transparent;
+}
+
+
+/**
+ * Siteorigin widgets bundle
+ */
+.sow-carousel-item .sow-carousel-thumbnail > a {
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+
+/**
+ * PrettyPhoto
+ */
+.pp_pic_holder p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/**
+ * Contact Form 7
+ */
+.wpcf7-form-control-wrap {
+  display: block;
+  padding: .2em 0;
+}
+
+
+/**
+ * MailPoet
+ */
+.widget_wysija_cont .wysija-submit {
+  margin-top: .4em;
+}
+.wysija-required {
+  @extend .required;
+}
+
+
+/**
+ * Meta slider
+ */
+.widget_metaslider_widget {
+  overflow: hidden;
+  position: relative;
+  .flex-control-paging {
+    position: absolute;
+    bottom: 0;
+  }
+  .metaslider-flex {
+    max-width: 100% !important;
+  }
+}

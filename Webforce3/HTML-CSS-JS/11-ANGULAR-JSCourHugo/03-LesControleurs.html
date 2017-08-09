@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Controleurs en AngularJS</title>
+    <!-- Chargement du Script Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+</head>
+
+<body ng-app="monApplication">
+<!-- CONSIGNE : 
+    1. Créer un Formulaire HTML comprenant 2 champs input : 
+    Nom et un Prénom 
+    2. Définissez la directive ng-model pour chaque champ.
+    3. Afficher dans un paragraphe le Nom et Prénom 
+    saisi par l'utilisateur.
+    4. BONUS : Afficher (avec ng-show) uniquement ce paragraphe si les champs 
+    Nom et Prénom ont été remplis.
+-->
+    <h3>Ajoute un Contact</h3>
+    <form ng-controller="monController">
+        <p><input type="text" placeholder="Votre prénom..." 
+                ng-model="contact.prenom"></p>
+
+        <p><input type="text" placeholder="Votre nom..." 
+                ng-model="contact.nom"></p>
+        <!--
+            LES FILTRES : 
+            http://www.tutoriel-angularjs.fr/tutoriel/2-utilisation-complete-d-angularjs/2-les-filtres
+            Les filtres sur AngularJS permettent de manipuler les données avant de les formater ou de les filtrer.
+            AngularJS dispose de 9 filtres fournit par défaut :
+                1. lowercase / uppercase
+                2. number
+                3. currency
+                4. json
+                5. limitTo
+                6. date
+                7. orderBy
+                8. filter
+        -->
+        <p ng-show="contact.prenom && contact.nom">
+            <!--Vous avez saisie : {{contact.prenom}} {{contact.nom | uppercase}}-->
+            Vous avez saisie : {{contact.nomcomplet()}}
+        </p>
+        <pre>{{contact}}</pre>
+    </form>
+
+    <script>
+        // -- 1. Création d'un module Angular qui contiendra notre Application et ses dépendances (Controleurs, Sercices, Directives, ..)
+        angular.module('monApplication', [])
+
+        // -- 2. Créer un Controleur pour mon Application
+        // : Le $scope contient l'ensemble des informations de mon App, c'est lui qui fait la liaison entre le modèle et la vue.
+        .controller('monController', ['$scope', function($scope) {
+
+            // -- 3. Accéder à notre variable contact depuis le controller.
+            $scope.contact = {
+                'prenom'    : 'Hugo',
+                'nom'       : '',
+                'nomcomplet': function() {
+                    return $scope.contact.prenom + ' ' + $scope.contact.nom;
+                }
+            }
+
+        }]);
+
+    </script>
+
+</body>
+</html>

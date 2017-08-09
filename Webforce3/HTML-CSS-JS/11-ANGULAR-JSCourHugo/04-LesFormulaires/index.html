@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage de la Page -->
+    <meta charset="UTF-8">
+    
+    <!-- Titre de la Page -->
+    <title>Les Formulaires en AngularJS</title>
+    
+    <!-- Pour Internet Explorer : 
+        S'assurer qu'il utilise la dernière version du moteur de rendu. 
+        https://www.alsacreations.com/astuce/lire/1437-comment-interdire-le-mode-de-compatibilite-sur-ie.html -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    
+    <!-- Affichage du site sans zoom, initialisé à 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- HTML5 Shiv -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+
+    <!-- Chargement du Script Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" integrity="sha256-3SrLjPeRPa1ofM280r+OMcUjJZKLWJHr6SRtRu3dRb0=" crossorigin="anonymous"></script>
+
+    <!-- Application Angular -->
+    <script src="js/main.js"></script>
+    
+</head>
+<body ng-app="mainApp" ng-controller="mainController">
+    
+    <!-- Contenu HTML -->
+    <main class="container">
+        <header class="row">
+            <div class="contact col-xs-12">
+                <h1>Espace Clients</h1>
+            </div>
+        </header>
+        <div ng-include="'templates/connexion.htm'"></div>
+    </main>
+</body>
+</html>

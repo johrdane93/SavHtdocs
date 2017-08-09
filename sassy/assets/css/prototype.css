@@ -1,0 +1,33 @@
+body{}
+a{}
+
+/**
+ * Various
+ */
+.assistive-text{}
+
+/**
+ * Widgets
+ */
+.widget{}
+.widget-title{}
+
+/**
+ * Content
+ */
+.entry{}
+.entry-content{}
+
+/**
+ * Formatting
+ */
+.wp-caption{}
+.wp-caption-text{}
+.wp-smiley{}
+.sticky{}
+.gallery-caption{}
+.bypostauthor{}
+.inline{}
+.alignright{} .text-align-right{}
+.alignleft{} .text-align-left{}
+.aligncenter{} .text-align-center{}

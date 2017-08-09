@@ -1,0 +1,3 @@
+a<span class='pseudo' style="color:#a700ff;">Un enfant </span><span>Un enfant  a rejoint la salle</span><span class='time'>16:25</span>
+<span class='pseudo' style="color:#a700ff;">Un enfant </span><span>jklmlkmp^ </span><span class='time'>16:25</span>
+<span class='pseudo' style="color:#a700ff;">Un enfant </span><span>Un enfant  a quitt&eacute; la salle</span><span class='time'>16:56</span>

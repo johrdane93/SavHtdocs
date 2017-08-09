@@ -1,0 +1,65 @@
+<section class="row">
+    
+    <!-- Début du Formulaire -->
+    <div class="col-xs-12">
+
+        <!--
+            PLUSIEURS VARIABLES PERMETTENT DE VERIFIER L'ETAT DES CHAMPS D'UN FORMULAIRE :
+            Il s'agit de Booleen, Vrai ou Faux :
+
+                $untouched Le champ n'a pas encore été touché
+                $touched Le champ a été touché
+                $pristine Le champ n'a pas encore été modifier
+                $dirty Le champ a été modifié
+                $invalid Le contenu du champ n'est pas valide
+                $valid Le contenu du champ est valide
+                
+                >> DEMONSTRATION : https://codepen.io/sevilayha/pen/xFcdI
+                >> NB : Observer le HTML, Angular rajoute automatiquement des classes autour du champ.
+        -->
+
+        <!-- novalidate : Permet de désactiver la validation HTML5 -->
+        <form novalidate ng-submit="identifiants.connexion()" name="connexion" class="form-horizontal">
+            <fieldset>
+                <!-- Nom du Formulaire -->
+                <legend>Connexion</legend>
+                
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email" class="col-md-4 control-label">Email</label>
+                   
+                   <!-- Ici, nous pouvons appliquer une classe conditionelle :
+                        ng-class=" { 'MaClasse' : UneConditionPourSappliquer }"
+                    -->
+                    <div class="col-md-8" ng-class="{ 'has-error' : connexion.email.$touched && connexion.email.$invalid }">
+
+                        <input type="email" required name="email" class="form-control" placeholder="Email" ng-model="identifiants.email">
+
+                        <p ng-show="connexion.email.$touched && connexion.email.$invalid" class="text-danger">Attention, vérifiez votre email.</p>
+                    </div>
+                </div>
+                
+                <!-- Mot de Passe -->
+                <div class="form-group">
+                    <label for="tel" class="col-md-4 control-label">Mot de Passe</label>
+                    <div class="col-md-8" ng-class="{ 'has-error' : connexion.mdp.$touched && connexion.mdp.$invalid }">
+                        <input type="password" name="mdp" class="form-control" required placeholder="******" ng-model="identifiants.mdp">
+                        <p ng-show="connexion.mdp.$touched && connexion.mdp.$invalid" class="text-danger">Attention, vérifiez votre mot de passe.</p>
+                    </div>
+                </div>
+                
+                <!-- Bouton d'Envoi -->
+                <div class="form-group">
+                    <div class="col-xs-9 col-xs-offset-3">
+                        <button ng-disabled="connexion.$invalid" type="submit" class="btn btn-primary" value="Connexion">Connexion</button>
+                    </div>
+                </div>                
+            </fieldset>
+        </form>
+      
+            {{identifiants}}
+        </pre>
+    </div>
+    <!-- Fin du Formulaire -->
+</section>
+    

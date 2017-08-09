@@ -1,0 +1,2 @@
+a<span class='pseudo' style="color:#f8a700;">SaMaSaMa</span><span>SaMaSaMa a rejoint la salle</span><span class='time'>10:35</span>
+<span class='pseudo' style="color:#f8a700;">SaMaSaMa</span><span>bonjour </span><span class='time'>10:35</span>
